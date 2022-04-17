@@ -5,6 +5,8 @@ import Home from "./components/Home";
 import LostFound from "./components/Lost&Found";
 import Alumni from "./components/Alumnis";
 import Course from "./components/Course";
+import SignIn from "./components/SignIn";
+
 import { BrowserRouter , Routes, Route, Link } from "react-router-dom";
 const App = () => {
   return (
@@ -17,6 +19,7 @@ const App = () => {
           <Route exact path="/chats" element={<Chats />} />
           <Route exact path="/alumni" element={<Alumni />} />
           <Route exact path="/lostfound" element={<LostFound />} />
+          <Route exact path="/signIn" element={<SignIn />} />
         </Routes>
         
       </div>
