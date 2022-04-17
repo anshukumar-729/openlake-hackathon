@@ -39,12 +39,12 @@ const lostSchema = new mongoose.Schema({
 const commonRoomSchema = new mongoose.Schema({
   personName: { type: String },
   date: { type: Date },
-  messege: { type: String }
+  message: { type: String }
 });
 const alumniInteractionSchema = new mongoose.Schema({
   alumniName: { type: String },
   date: { type: Date },
-  messege: { type: String }
+  message: { type: String }
 });
 
 // listSchema.pre('save', async function (next){

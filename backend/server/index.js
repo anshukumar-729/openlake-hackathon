@@ -161,11 +161,13 @@ app.patch("/api/lost&found/update/:id", async (req, res) => {
 
 /// Common room ######################################################################3333
 app.post("/api/common/add", async (req, res) => {
+  var dt = new Date();
+  var tm = dt.toLocaleTimeString();
   try {
     const common = await CommonRoom.create({
      personName: req.body.personName,
-  messege: req.body.messege,
-  date:req.body.date
+  message: req.body.message,
+  date:dt
     });
 
     result = await CommonRoom.find({});
@@ -191,7 +193,7 @@ app.post("/api/alumni/add", async (req, res) => {
   try {
     const alumni = await AlumniInteraction.create({
      alumniName: req.body.alumniName,
-  messege: req.body.messege,
+  message: req.body.messege,
   date:req.body.date
     });
 
