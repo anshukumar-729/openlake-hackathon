@@ -10,6 +10,7 @@ const Course = () => {
     const courseCode=id;
     const [result, setResult] = useState([]);
      const [blog, setBlog] = useState("");
+     const [qna, setQna] = useState("");
     const [bloggerName,setBloggerName]=useState("Anshu Kumar");
     const [bloggerBatch,setBloggerBatch]=useState("CS@2020");
     const setitem = (data) => {
@@ -70,6 +71,36 @@ const Course = () => {
 
      }
    
+     async function AddForum(event) {
+       event.preventDefault();
+       try {
+         const response = await fetch(
+           //    "https://arcane-brushlands-01906.herokuapp.com/api/register",
+           
+           "http://localhost:3020/api/courses/forum/add",
+           {
+             method: "POST",
+             headers: {
+               "Content-Type": "application/json",
+             },
+             body: JSON.stringify({
+               courseCode,
+               blog:qna,
+               bloggerName,
+             }),
+           }
+         );
+         const data = await response.json();
+         console.log(data.result[data.result.length - 1]);
+         
+         setQna("");
+         getCourseDetail();
+       } catch (err) {
+         console.log(err);
+       }
+
+     }
+   
 
 
 
@@ -109,16 +140,16 @@ const Course = () => {
                   className="p-6 w-2/5 mr-10 mt-5"
                   style={{ backgroundColor: "#292D2B" }}
                 >
-                  <p>
-                    {value.blog}
-                  </p>
+                  <p>{value.blog}</p>
                   <div className="flex mt-3">
                     <img
                       className="w-10 rounded-full h-10"
                       src="https://picsum.photos/200/300"
                     />
                     <div className="ml-4">
-                      <div className="flex justify-between ">{value.bloggerName}</div>
+                      <div className="flex justify-between ">
+                        {value.bloggerName}
+                      </div>
                       {value.bloggerBatch}
                     </div>
                   </div>
@@ -126,8 +157,6 @@ const Course = () => {
               ))}
             </>
           )}
-
-          
         </div>
         <div className="flex mt-10 ">
           <form onSubmit={AddReview}>
@@ -148,71 +177,44 @@ const Course = () => {
           </form>
         </div>
 
-        <h3 className="text-3xl mt-7"> Student Forum</h3>
+        <h3 className="text-3xl mt-7"> Student Q & A</h3>
         <div className="bg-black p-5 mt-10 rounded-md">
+           {result.length != 0 && (
+            <>
+              {result[0].data[0].forum.map((value) => (
           <div className="flex ml-4 mb-4">
             <img
               className="w-10 rounded-full h-10"
               src="https://picsum.photos/200/300"
             />
             <div>
-              <div className="flex justify-between ml-4">Sanat Tudu 17:20</div>
+              <div className="flex justify-between ml-4">{value.bloggerName} &nbsp;{value.date}</div>
               <h2 className="ml-4">
-                aesent orci nullam massa dictum quis. Tellus sed duis nunc amet
-                ut eu eu. Sed nunc nullam integer est varius. Dolor consectetur
-                ac risus, vulputate aliquam sapien aliquet duis. Eget ipsum nec
-                aesent orci nullam massa dictum quis. Tellus sed duis nunc amet
-                ut eu eu. Sed nunc nullam integer est varius. Dolor consectetur
-                ac risus, vulputate aliquam sapien aliquet duis. Eget ipsum nec
-                aesent orci nullam massa dictum quis. Tellus sed duis nunc amet
-                ut eu eu. Sed nunc nullam integer est varius. Dolor consectetur
-                ac risus, vulputate aliquam sapien aliquet duis. Eget ipsum nec
+                {value.blog}
               </h2>
             </div>
           </div>
-          <div className="flex ml-4 mb-4">
-            <img
-              className="w-10 rounded-full h-10"
-              src="https://picsum.photos/200/300"
-            />
-            <div>
-              <div className="flex justify-between ml-4">Sanat Tudu 17:20</div>
-              <h2 className="ml-4">Message</h2>
-            </div>
-          </div>
-          <div className="flex ml-4 mb-4">
-            <img
-              className="w-10 rounded-full h-10"
-              src="https://picsum.photos/200/300"
-            />
-            <div>
-              <div className="flex justify-between ml-4">Sanat Tudu 17:20</div>
-              <h2 className="ml-4">Message</h2>
-            </div>
-          </div>
-          <div className="flex ml-4 mb-4">
-            <img
-              className="w-10 rounded-full h-10"
-              src="https://picsum.photos/200/300"
-            />
-            <div>
-              <div className="flex justify-between ml-4">Sanat Tudu 17:20</div>
-              <h2 className="ml-4">Message</h2>
-            </div>
-          </div>
+              ))}</>)}
+        
         </div>
-        <div className="flex mt-4 justify-between">
-          <input
-            className="w-4/5 h-10 rounded-md p-3 text-black"
-            placeholder="message"
-          ></input>
-          <button className="">
-            <FontAwesomeIcon
-              icon={faPaperPlane}
-              className="ml-2 text-xl bg-blue-500 p-3 rounded-full"
-            />
-          </button>
-        </div>
+        <form onSubmit={AddForum}>
+          <div className="flex mt-4 justify-between">
+            <input
+              className="w-4/5 h-10 rounded-md p-3 text-black"
+              placeholder="Q & A"
+              value={qna}
+              onChange={(e) => setQna(e.target.value)}
+              type="text"
+              required
+            ></input>
+            <button className="">
+              <FontAwesomeIcon
+                icon={faPaperPlane}
+                className="ml-2 text-xl bg-blue-500 p-3 rounded-full"
+              />
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );

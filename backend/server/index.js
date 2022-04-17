@@ -96,6 +96,8 @@ app.post("/api/courses/review/add", async (req, res) => {
   }
 });
 app.post("/api/courses/forum/add", async (req, res) => {
+  var dt = new Date();
+  var tm = dt.toLocaleTimeString();
   var code = req.body.courseCode;
   try {
     const course = await Blogs.update(
@@ -103,7 +105,7 @@ app.post("/api/courses/forum/add", async (req, res) => {
       {
         $push: {
           forum: {
-            date: req.body.date,
+            date: dt,
             blog: req.body.blog,
             bloggerName: req.body.bloggerName,
           },
