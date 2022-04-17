@@ -147,3 +147,93 @@
   .login-form .action button:nth-child(2):hover {
     background: #3c4d6d;
   }
+
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(53, 126, 69);
+    font-size: 400%;
+    
+ }
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap");
+
+ * {
+   margin: 0;
+   padding: 0;
+   
+   box-sizing: border-box;
+   text-decoration: none;
+   font-family: "Poppins";
+ }
+ 
+ body {
+ 
+   
+    background: #191818; 
+ }
+ 
+ .container {
+   margin-top: 50px;
+ }
+ 
+  img{
+    border-radius: 50%;
+  }
+ .container .team {
+   width: auto;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   flex-wrap: wrap;
+ }
+ 
+ .container .team .member {
+   width: 325px;
+   margin: 10px;
+   background: rgb(59, 56, 56);
+   border-radius: 6px;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+   padding: 25px;
+ }
+ 
+ .container .team .member img {
+   width: 80px;
+ }
+ 
+ .container .team .member h3 {
+   color: #444;
+ }
+ 
+ .container .team .member span {
+   font-size: 12px;
+   color: #999;
+ }
+ 
+ .container .team .member p {
+   margin: 15px 0;
+   font-weight: 400;
+   color: #999;
+   font-size: 15px;
+   text-align: justify;
+ }
+  
+ .container .team .member .btn a {
+   background: #ddd;
+   display: block;
+   float: right;
+   width: 125px;
+   margin: 0 10px;
+   padding: 10px;
+   border-radius: 6px;
+   color: #444;
+   text-transform: capitalize;
+   transition: all 0.3s ease;
+ }
+ 
+ .container .team .member .btn a:hover {
+   background: #5a36dd;
+   color: #fff;
+ }
+ 
