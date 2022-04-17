@@ -25,6 +25,7 @@ app.post("/api/courses/register", async (req, res) => {
         const course = await Courses.create({
           courseName: req.body.courseName,
           courseCode: req.body.courseCode,
+          credits:req.body.credits,
           instructorName: req.body.instructorName,
           topicsIncluded: req.body.topicsIncluded,
         });
@@ -35,6 +36,7 @@ app.post("/api/courses/register", async (req, res) => {
           const blog = await Blogs.create({
             courseCode: req.body.courseCode,
             courseName: req.body.courseName,
+            credits: req.body.credits,
             instructorName: req.body.instructorName,
             about: req.body.about,
             review: [],

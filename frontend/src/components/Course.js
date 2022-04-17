@@ -17,6 +17,7 @@ const Course = () => {
             <h3 className="mt-10">course code : {id}</h3>
           </div>
           <img src="anandSir.png" className="w-1/5    rounded-md"></img>
+          
         </div>
         <h2 className="text-3xl mt-10">About Course</h2>
         <p className="mt-5">

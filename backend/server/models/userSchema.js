@@ -5,16 +5,17 @@ const courseSchema = new mongoose.Schema({
   courseName: { type: String, required: true, unique: true },
   courseCode: { type: String, required: true, unique: true },
   instructorName: { type: String },
+  credits:{type:Number},
   topicsIncluded: { type: Array },
 });
 const blogsSchema = new mongoose.Schema({
   courseCode: { type: String, required: true },
   courseName: { type: String },
+  credits: { type: String },
   instructorName: { type: String },
-  about: { type: String },
+  about: { type: Number },
   review: [
     {
-      
       bloggerName: { type: String },
       blog: { type: String },
       bloggerBatch: { type: String },
@@ -22,7 +23,6 @@ const blogsSchema = new mongoose.Schema({
   ],
   forum: [
     {
-      
       bloggerName: { type: String },
       blog: { type: String },
       date: { type: Date },
