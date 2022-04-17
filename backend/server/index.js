@@ -63,6 +63,14 @@ app.get("/api/courses/read", async (req, res) => {
     res.send(err);
   }
 });
+app.get("/api/courseDetail/:code", async (req, res) => {
+  try {
+    result = await Blogs.find({courseCode:req.params.code});
+    res.json({ status: "ok", result: result });
+  } catch (err) {
+    res.send(err);
+  }
+});
 
 app.post("/api/courses/review/add", async (req, res) => {
   var code = req.body.courseCode;
@@ -80,7 +88,7 @@ app.post("/api/courses/review/add", async (req, res) => {
       }
     );
 
-    result = await Blogs.find({});
+    result = await Blogs.find({courseCode:code});
     res.json({ status: "ok", result: result });
   } catch (err) {
     console.log(err);
