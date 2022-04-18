@@ -39,6 +39,9 @@ const lostSchema = new mongoose.Schema({
   isReceived: { type: Boolean },
   founderName: { type: String },
   receiverName: { type: String },
+  phone:{type:Number},
+  email:{type:String},
+  itemPhoto:{type:String},
   photo: { type: String },
 });
 const commonRoomSchema = new mongoose.Schema({

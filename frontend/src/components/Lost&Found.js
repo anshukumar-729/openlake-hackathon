@@ -13,6 +13,10 @@ const LostFound = () => {
     window.location.replace("/signIn");
   }
   const [time,setTime] = useState(0);
+  const [lostItem,setLostItem] = useState("");
+  const [contact1,setContact1] = useState("");
+  const [contact2,setContact2] = useState("");
+  const [foundItem,setFoundItem] = useState("");
   const [result,setResult] = useState([]);
   const setitem = (data) => {
     console.log(data)
@@ -30,11 +34,28 @@ const LostFound = () => {
         `http://localhost:3020/`
       );
       const data = await response.json();
-      setitem(data.files);
-      console.log(data.files[0].filename);
+      setitem(data.result);
+      console.log(data);
       //  const re = data.result;
 
       console.log(result[0].data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  async function deleteItem(key) {
+    console.log("deleting")
+    try {
+      const response = await fetch(
+        // "https://arcane-brushlands-01906.herokuapp.com/api/read",
+        `http://localhost:3020/delete/${key}`
+      );
+      const data = await response.json();
+      
+      console.log(data);
+      getImages();
+      //  const re = data.result;
+
     } catch (err) {
       console.log(err);
     }
@@ -43,24 +64,86 @@ const LostFound = () => {
     getImages();
     setTime(1);
   }
+  const itemDone = (key,email) =>{
+    console.log("clicking")
+    console.log(key)
+    console.log(email);
+
+      if(email==localStorage.getItem("email")){
+        deleteItem(key);
+      }
+  }
   return (
     <div className="">
       <NavBar />
-      {/* {result[0] && (
-        <>
-          {result[0].data[0].filename}
-          {result[0].data.map((file) => (
-            <>
-              <img
-                className="h-20"
-                src={"http://localhost:3020/image/" + file.filename}
-              ></img>
-            </>
-          ))}
-        </>
-      )} */}
+
       <div className="p-10">
-        <h1 class="text-white text-2xl ml-15">FIND MY ITEM</h1>
+        <h1 class="text-white text-2xl ml-15">LOST ITEM</h1>
+        <form
+          action="http://localhost:3020/upload"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class=" flex">
+            <input name="url" value={window.location.href} hidden></input>
+
+            <input
+              name="photo"
+              value={localStorage.getItem("photo")}
+              hidden
+            ></input>
+            <input
+              name="receiverName"
+              value={localStorage.getItem("name")}
+              hidden
+            ></input>
+            <input name="founderName" value={""} hidden></input>
+            <input
+              name="email"
+              value={localStorage.getItem("email")}
+              hidden
+            ></input>
+            <input
+              className="p-3 bg-black text-white rounded-md border-2 border-gray-600 h-12 mt-10 w-1/3"
+              name="item"
+              value={lostItem}
+              onChange={(e) => setLostItem(e.target.value)}
+              type="text"
+              placeholder="Item name & description"
+              required
+            ></input>
+            <input
+              className="p-3 bg-black text-white rounded-md border-2 border-gray-600 h-12 mt-10 w-1/5 ml-4"
+              name="phone"
+              value={contact2}
+              onChange={(e) => setContact2(e.target.value)}
+              type="number"
+              placeholder="Your Contact"
+              required
+            ></input>
+
+            <div className=" mt-7 ml-5 ">
+              <label for="file" className="text-white text-xl  ml-3">
+                Upload an Image
+              </label>
+              <br></br>
+              <input
+                className="text-white ml-3 mt-2"
+                type="file"
+                name="file"
+                id="file"
+              />
+            </div>
+          </div>
+          <button
+            className="bg-yell mt-6 text-lg flex  text-black pl-3 pr-3 p-1 rounded-xl"
+            type="submit"
+          >
+            <FontAwesomeIcon icon={faCircleArrowUp} className="mr-2 mt-1 " />{" "}
+            POST
+          </button>
+        </form>
+        <h1 class="text-white text-2xl ml-15 mt-20">FOUND ITEM</h1>
         <form
           action="http://localhost:3020/upload"
           method="POST"
@@ -69,22 +152,51 @@ const LostFound = () => {
           <div class=" flex">
             <input name="url" value={window.location.href} hidden></input>
             <input
-              className="p-3 bg-black text-white rounded-md border-2 border-gray-600 h-12 mt-10 w-1/3"
-              name="item"
-              value=""
-              placeholder="Item name & description"
+              name="email"
+              value={localStorage.getItem("email")}
+              hidden
             ></input>
 
-            <div className="flex mt-10 ml-20 ">
-              <label for="file" className="text-white text-xl mr-3">
-                Add a Image
+            <input
+              name="photo"
+              value={localStorage.getItem("photo")}
+              hidden
+            ></input>
+            <input
+              name="founderName"
+              value={localStorage.getItem("name")}
+              hidden
+            ></input>
+            <input name="receiverName" value={""} hidden></input>
+            <input
+              className="p-3 bg-black text-white rounded-md border-2 border-gray-600 h-12 mt-10 w-1/3"
+              name="item"
+              value={foundItem}
+              onChange={(e) => setFoundItem(e.target.value)}
+              type="text"
+              placeholder="Item name & description"
+              required
+            ></input>
+            <input
+              className="p-3 bg-black text-white rounded-md border-2 border-gray-600 h-12 mt-10 w-1/5 ml-4"
+              name="phone"
+              value={contact1}
+              onChange={(e) => setContact1(e.target.value)}
+              type="number"
+              placeholder="Your Contact"
+              required
+            ></input>
+
+            <div className=" mt-7 ml-5 ">
+              <label for="file" className="text-white text-xl  ml-3">
+                Upload an Image
               </label>
+              <br></br>
               <input
-                className="text-white ml-3"
+                className="text-white ml-3 mt-2"
                 type="file"
                 name="file"
                 id="file"
-                required
               />
             </div>
           </div>
@@ -92,9 +204,70 @@ const LostFound = () => {
             className="bg-yell mt-6 text-lg flex  text-black pl-3 pr-3 p-1 rounded-xl"
             type="submit"
           >
-            <FontAwesomeIcon icon={faCircleArrowUp} className="mr-2 mt-1 " /> FIND
+            <FontAwesomeIcon icon={faCircleArrowUp} className="mr-2 mt-1 " />{" "}
+            POST
           </button>
         </form>
+        {result[0] && (
+          <>
+            {result[0].data.map((file) => (
+              <>
+                {file.isReceived==false && (
+                  <>
+                    <div className="bg-gray-300 flex p-3 m-2 mt-5 h-40 mb-10 rounded-sm">
+                      <button
+                        onClick={() => itemDone(file.itemPhoto, file.email)}
+                        className="bg-green-500 p-3 rounded-md text-white h-10 "
+                      >
+                        Done
+                      </button>
+                      <img
+                        className="h-35"
+                        src={"http://localhost:3020/image/" + file.itemPhoto}
+                      ></img>
+                      <h2 className="text-black text-xl mt-10 ml-6">
+                        {file.itemName}
+                      </h2>
+                      {file.founderName != "" && (
+                        <>
+                          <div className="bg-yellow-500 p-2 text-sm h-14 rounded-full absolute right-16 text-white">
+                            <p className="ml-3"> Found on</p>
+                            <p className="text-white  ml-3 ">{file.date}</p>
+                          </div>
+                        </>
+                      )}
+                      {file.receiverName != "" && (
+                        <>
+                          <div className="bg-red-500 p-2 text-sm h-14 rounded-full absolute right-16 text-white">
+                            <p className="ml-3"> Lost on</p>
+                            <p className="text-white  ml-3 ">{file.date}</p>
+                          </div>
+                        </>
+                      )}
+
+                      <div className="flex absolute right-16 mt-20 ml-10 bg-gray-700 p-3 h-16  rounded-md text-black">
+                        <img
+                          className="w-10 rounded-full h-10"
+                          src={file.photo}
+                        />
+                        <div>
+                          <p className="text-white  ml-3 ">
+                            {file.receiverName == "" && <>{file.founderName}</>}
+                            {file.founderName == "" && <>{file.receiverName}</>}
+                          </p>
+
+                          <p className="text-white text-sm ml-3 ">
+                            {file.phone}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                )}
+              </>
+            ))}
+          </>
+        )}
       </div>
     </div>
   );

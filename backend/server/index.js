@@ -16,6 +16,7 @@ const { Courses } = require("./models/userSchema");
 const { CommonRoom } = require("./models/userSchema");
 const { AlumniInteraction } = require("./models/userSchema");
 const { response } = require("express");
+const Crypto = require("crypto-js");
 // const {conn} = require("./db/conn");
 app.use(cors());
 app.use(express.json());
@@ -38,7 +39,7 @@ conn.once("open", () => {
   gfs.collection("uploads");
  
 });
-
+var filename="";
 const storage = new GridFsStorage({
   url: DB,
   file: (req, file) => {
@@ -47,7 +48,8 @@ const storage = new GridFsStorage({
         if (err) {
           return reject(err);
         }
-        const filename = buf.toString("hex") + path.extname(file.originalname);
+         filename = buf.toString("hex") + path.extname(file.originalname);
+        console.log(filename)
         const fileInfo = {
           filename: filename,
           bucketName: "uploads",
@@ -58,8 +60,8 @@ const storage = new GridFsStorage({
   },
 });
 const upload = multer({ storage });
-
-app.get("/", (req, res) => {
+var files2;
+app.get("/", async (req, res) => {
   gfs.files.find().toArray((err, files) => {
     // Check if files
     if (!files || files.length === 0) {
@@ -75,14 +77,50 @@ app.get("/", (req, res) => {
           file.isImage = false;
         }
       });
-      res.json({ files: files });
+     
+     
     }
+    files2=files
   });
+   try {
+     result = await Lost.find({});
+    //  console.log(result)
+     res.json({ status: "ok", result: result, files: files2 });
+   } catch (err) {
+     console.log(err);
+     res.send(err);
+   }
 });
-app.post("/upload", upload.single("file"), (req, res) => {
+app.post("/upload", upload.single("file"), async (req, res) => {
   // res.json({ file: req.file });
-  console.log(req.body.url);
-  res.redirect(req.body.url);
+  
+    var dt = new Date();
+    var tm = dt.toLocaleTimeString();
+    if(!filename){
+      filename = Crypto.SHA256(11).toString();
+    }
+  try {
+
+        const lost = await Lost.create({
+          itemName: req.body.item,
+          phone: req.body.phone,
+          itemPhoto:filename,
+          email:req.body.email,
+          date:dt,
+          isReceived: false,
+          founderName: req.body.founderName,
+          receiverName: req.body.receiverName,
+          photo: req.body.photo,
+        });
+
+
+     res.redirect(req.body.url);
+  } catch (err) {
+    console.log(err);
+    res.send(err);
+  }
+
+ 
   
 });
 app.get("/files", (req, res) => {
@@ -254,34 +292,20 @@ app.get("/api/courses/blog/read/:code", async (req, res) => {
 
 /// lost and found ###################################################################3333
 
-app.post("/api/lost&found/add", async (req, res) => {
-  try {
-    const lost = await Lost.create({
-      itemName: req.body.itemName,
-      date: req.body.date,
-      isReceived: false,
-      founderName: req.body.founderName,
-      receiverName: "",
-    });
 
-    result = await Lost.find({});
-    res.json({ status: "ok", result: result });
-  } catch (err) {
-    console.log(err);
-    res.send(err);
-  }
-});
-app.patch("/api/lost&found/update/:id", async (req, res) => {
+app.get("/delete/:id", async (req, res) => {
+  console.log(req.params.id)
   try {
-    const lost = await Lost.update({
-      _id: req.params.id,
-     
-    },{
-      $set:{
-        isReceived:true,
-        receiverName:req.body.receiverName
+    const lost = await Lost.updateMany(
+      {
+        itemPhoto: req.params.id,
+      },
+      {
+        $set: {
+          isReceived: true,
+        },
       }
-    });
+    );
 
     result = await Lost.find({});
     res.json({ status: "ok", result: result });
