@@ -16,14 +16,14 @@ const Alumni = () => {
 
   <div className="container">
     
-    <div className="team">
+  <div className="team">
       <div className="member">
         <img src="https://media-exp1.licdn.com/dms/image/C5103AQGSjnl5xhqqVw/profile-displayphoto-shrink_800_800/0/1553596917808?e=1655942400&v=beta&t=mxPi28dqY4iz29R1wjdFo1mocA5_EDw3JYoZwSfsBd8" alt="member_image"/>
         <h3 style={{color: "#fff"}}>Ashutosh Sahu</h3>
         <span>Google</span>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.amet consecteturamet consecteturamet Laboriosam voluptatum fuga iure. Est, dicta voluptatum.</p>
         <div className="btn">
-          <a href="#">follow</a>
+          <a href="https://www.linkedin.com/in/ashutosh-s-28b543183/">Connect</a>
         </div>
       </div>
             <div className="member">
@@ -32,7 +32,7 @@ const Alumni = () => {
         <span>SuperTokens</span>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.amet consecteturamet consecteturamet Laboriosam voluptatum fuga iure. Est, dicta voluptatum.</p>
         <div className="btn">
-          <a href="#">follow</a>
+          <a href="https://www.linkedin.com/in/kshivendu/">follow</a>
         </div>
       </div>
       <div className="member">
@@ -41,7 +41,7 @@ const Alumni = () => {
         <span>Google</span>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.amet consecteturamet consecteturamet Laboriosam voluptatum fuga iure. Est, dicta voluptatum.</p>
         <div className="btn">
-          <a href="#">follow</a>
+          <a href="https://www.linkedin.com/in/ivan-deka-a70010181/">follow</a>
         </div>
       </div>
       <div className="member">
@@ -50,7 +50,7 @@ const Alumni = () => {
         <span>Amazon</span>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.amet consecteturamet consecteturamet Laboriosam voluptatum fuga iure. Est, dicta voluptatum.</p>
         <div className="btn">
-          <a href="#">follow</a>
+          <a href="https://www.linkedin.com/in/abhishek-singh-kushwaha-52500922a/">follow</a>
         </div>
       </div>
       <div className="member">
@@ -59,7 +59,7 @@ const Alumni = () => {
         <span>AirAsia</span>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.amet consecteturamet consecteturamet Laboriosam voluptatum fuga iure. Est, dicta voluptatum.</p>
         <div className="btn">
-          <a href="#">follow</a>
+          <a href="https://www.linkedin.com/in/naman-samarth/">follow</a>
         </div>
       </div>
       <div className="member">
@@ -68,7 +68,7 @@ const Alumni = () => {
         <span>Amazon</span>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.amet consecteturamet consecteturamet Laboriosam voluptatum fuga iure. Est, dicta voluptatum.</p>
         <div className="btn">
-          <a href="#">follow</a>
+          <a href="https://www.linkedin.com/in/neha-jain-967690164/">follow</a>
         </div>
       </div>
     </div>
