@@ -3,6 +3,14 @@ import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 
 const Courses = () => {
+  if (localStorage.getItem("active") == 1) {
+    console.log("active");
+    console.log(localStorage.getItem("name"));
+    console.log(localStorage.getItem("email"));
+    console.log(localStorage.getItem("photo"));
+  } else {
+    window.location.replace("/signIn");
+  }
   const [time, setTime] = useState(0);
   const [result, setResult] = useState([]);
   const [search, setSearch] = useState("");

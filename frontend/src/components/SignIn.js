@@ -8,11 +8,26 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 
 const SignIn = () => {
-  const [isAuthenticated,setIsAuthenticated]=useState(0);
+   const [isAuthenticated, setIsAuthenticated] = useState(0);
+   const [isFailed, setIsFailed] = useState(0);
+   const [name, setName] = useState("");
+   const [email, setEmail] = useState("");
+   const [photo, setPhoto] = useState("");
   const authenticate = (user) =>{
     setIsAuthenticated(1);
-    console.log("authenticted");
+    setIsFailed(0);
+    console.log(user);
+    setName(user.displayName);
+    setEmail(user.email);
+    setPhoto(user.photoURL);
+    localStorage.setItem("active",1);
+    localStorage.setItem("name",user.displayName);
+    localStorage.setItem("email",user.email);
+    localStorage.setItem("photo", user.photoURL);
     
+    console.log("authenticted");
+    window.location.replace("/");   
+
   }
   const loginWithFirebase =()=>{
       const provider = new GoogleAuthProvider();
@@ -23,9 +38,13 @@ const SignIn = () => {
          const email = result.user.email;
 
          console.log(email.match(regex1));
-         if((email.match(regex1))){
+         if((email.match(regex1))||1){
            authenticate(result.user);
          }
+         else{
+           setIsFailed(1);
+         }
+
 
        })
       .catch((err)=>{
@@ -80,6 +99,11 @@ const SignIn = () => {
           >
             Login with google
           </button>
+          {isFailed == 1 && (
+            <>
+              <h2 className="text-red-500 mt-5">*Please Login only with IIT BHILAI account</h2>
+            </>
+          )}
         </form>
         {/* <div className="p-2">
           <h2 className="text-center ">Don't have an account?</h2>

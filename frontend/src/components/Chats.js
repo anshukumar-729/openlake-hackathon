@@ -7,19 +7,27 @@ import { faArrowsRotate } from "@fortawesome/free-solid-svg-icons";
 
 const Chats = () => {
   // var result=[{personName:"aa"}];
-  
-  const [personName,setPersonName]=useState("Anshu kumar");
-  
-  const [message,setMessage]=useState("");
-  const [result,setResult]=useState([]);
- const setitem = (data) =>{
-   setResult([{
-     data:data
-   }])
- }
+  if(localStorage.getItem("active")==1){
+    console.log("active");
+    console.log(localStorage.getItem("name"));
+    console.log(localStorage.getItem("email"));
+    console.log(localStorage.getItem("photo"));
+  }
+  else{
+    window.location.replace("/signIn");
+  }
+  const [personName, setPersonName] = useState("Anshu kumar");
+
+  const [message, setMessage] = useState("");
+  const [result, setResult] = useState([]);
+  const setitem = (data) => {
+    setResult([
+      {
+        data: data,
+      },
+    ]);
+  };
   async function SendMassage(event) {
-    
-    
     event.preventDefault();
     try {
       const response = await fetch(
@@ -31,8 +39,9 @@ const Chats = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            personName,
+            personName:localStorage.getItem("name"),
             message,
+            photo:localStorage.getItem("photo")
           }),
         }
       );
@@ -47,23 +56,23 @@ const Chats = () => {
     // const data = await response.json()
     // console.log(data)
   }
-    async function getMassage() {
-      try {
-        const response = await fetch(
-          // "https://arcane-brushlands-01906.herokuapp.com/api/read",
-          "http://localhost:3020/api/common/read"
-        );
-        const data = await response.json();
-        setitem(data.result);
+  async function getMassage() {
+    try {
+      const response = await fetch(
+        // "https://arcane-brushlands-01906.herokuapp.com/api/read",
+        "http://localhost:3020/api/common/read"
+      );
+      const data = await response.json();
+      setitem(data.result);
       console.log(result[0].data);
-      const re=(data.result);
-     
+      const re = data.result;
+
       // console.log(typeof(re));
-      } catch (err) {
-        console.log(err);
-      }
+    } catch (err) {
+      console.log(err);
     }
-    // getMassage();
+  }
+  // getMassage();
   return (
     <div className="">
       <NavBar />
@@ -108,12 +117,14 @@ const Chats = () => {
                 <div className="flex  mb-5 bg-gray-700 p-3 rounded-t-xl text-black">
                   <img
                     className="w-10 rounded-full h-10"
-                    src="https://picsum.photos/200/300"
+                    src={value.photo}
                   />
                   <div>
                     <div className="flex justify-between ml-4">
                       <p>{value.personName}</p>
-                      <p className="ml-10 text-sm absolute right-32">{value.date}</p>
+                      <p className="ml-10 text-sm absolute right-32">
+                        {value.date}
+                      </p>
                     </div>
                     <h2 className="ml-4">{value.message}</h2>
                   </div>

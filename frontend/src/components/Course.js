@@ -5,6 +5,14 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "react-router-dom";
 
 const Course = () => {
+  if (localStorage.getItem("active") == 1) {
+    console.log("active");
+    console.log(localStorage.getItem("name"));
+    console.log(localStorage.getItem("email"));
+    console.log(localStorage.getItem("photo"));
+  } else {
+    window.location.replace("/signIn");
+  }
   const [time, setTime] = useState(0);
     const { id } = useParams();
     const courseCode=id;
@@ -55,13 +63,14 @@ const Course = () => {
              body: JSON.stringify({
                courseCode,
                blog,
-               bloggerBatch,
-               bloggerName,
+               photo: localStorage.getItem("photo"),
+               bloggerBatch:localStorage.getItem("email"),
+               bloggerName:localStorage.getItem("name"),
              }),
            }
          );
          const data = await response.json();
-         console.log(data.result[data.result.length - 1]);
+        //  console.log(data.result[data.result.length - 1]);
          
          setBlog("");
          getCourseDetail();
@@ -76,7 +85,7 @@ const Course = () => {
        try {
          const response = await fetch(
            //    "https://arcane-brushlands-01906.herokuapp.com/api/register",
-           
+
            "http://localhost:3020/api/courses/forum/add",
            {
              method: "POST",
@@ -85,13 +94,14 @@ const Course = () => {
              },
              body: JSON.stringify({
                courseCode,
-               blog:qna,
-               bloggerName,
+               blog: qna,
+               photo: localStorage.getItem("photo"),
+               bloggerName:localStorage.getItem("name"),
              }),
            }
          );
          const data = await response.json();
-         console.log(data.result[data.result.length - 1]);
+         console.log(data);
          
          setQna("");
          getCourseDetail();
@@ -142,10 +152,7 @@ const Course = () => {
                 >
                   <p>{value.blog}</p>
                   <div className="flex mt-3">
-                    <img
-                      className="w-10 rounded-full h-10"
-                      src="https://picsum.photos/200/300"
-                    />
+                    <img className="w-10 rounded-full h-10" src={value.photo} />
                     <div className="ml-4">
                       <div className="flex justify-between ">
                         {value.bloggerName}
@@ -179,23 +186,21 @@ const Course = () => {
 
         <h3 className="text-3xl mt-7"> Student Q & A</h3>
         <div className="bg-black p-5 mt-10 rounded-md">
-           {result.length != 0 && (
+          {result.length != 0 && (
             <>
               {result[0].data[0].forum.map((value) => (
-          <div className="flex ml-4 mb-4">
-            <img
-              className="w-10 rounded-full h-10"
-              src="https://picsum.photos/200/300"
-            />
-            <div>
-              <div className="flex justify-between ml-4">{value.bloggerName} &nbsp;{value.date}</div>
-              <h2 className="ml-4">
-                {value.blog}
-              </h2>
-            </div>
-          </div>
-              ))}</>)}
-        
+                <div className="flex ml-4 mb-4">
+                  <img className="w-10 rounded-full h-10" src={value.photo} />
+                  <div>
+                    <div className="flex justify-between ml-4">
+                      {value.bloggerName} &nbsp;{value.date}
+                    </div>
+                    <h2 className="ml-4">{value.blog}</h2>
+                  </div>
+                </div>
+              ))}
+            </>
+          )}
         </div>
         <form onSubmit={AddForum}>
           <div className="flex mt-4 justify-between">

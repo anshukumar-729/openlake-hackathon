@@ -17,7 +17,7 @@ require("./db/conn");
 /// courses #################################################################33
 app.post("/api/courses/register", async (req, res) => {
   try {
-    no = await Courses.find({ courseCode: req.body.courseCode }).count();
+    no = await Blogs.find({ courseCode: req.body.courseCode }).count();
     if (no != 0) {
       res.json({ messege: "duplicate entry" });
     } else {
@@ -82,6 +82,7 @@ app.post("/api/courses/review/add", async (req, res) => {
           review: {
             bloggerBatch: req.body.bloggerBatch,
             blog: req.body.blog,
+            photo:req.body.photo,
             bloggerName: req.body.bloggerName,
           },
         },
@@ -107,6 +108,7 @@ app.post("/api/courses/forum/add", async (req, res) => {
           forum: {
             date: dt,
             blog: req.body.blog,
+            photo:req.body.photo,
             bloggerName: req.body.bloggerName,
           },
         },
@@ -179,6 +181,7 @@ app.post("/api/common/add", async (req, res) => {
     const common = await CommonRoom.create({
      personName: req.body.personName,
   message: req.body.message,
+  photo:req.body.photo,
   date:dt
     });
 
