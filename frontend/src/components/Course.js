@@ -129,14 +129,19 @@ const Course = () => {
             </h3>
             <h3 className="mt-10">course code : {courseCode}</h3>
           </div>
-          <img src="anandSir.png" className="w-1/5    rounded-md"></img>
+          {result.length!=0 && (
+            <>
+              <img
+                src={result[0].data[0].photo}
+                // src=""
+                className="w-1/5    rounded-md"
+              ></img>
+            </>
+          )}
         </div>
         <h2 className="text-3xl mt-10">About Course</h2>
         <p className="mt-5">
-          Sagittis purus donec nam odio ornare dolor. Et nunc, faucibus nisl nam
-          a leo auctor. Commodo non iaculis condimentum nec odio feugiat in
-          risus. Quis ultrices at lacus, cras. In nulla at nullam mauris tellus
-          et. Adipiscing libero malesuada vitae orci tellus.
+          
           {result.length != 0 && <>{result[0].data[0].about} </>}
         </p>
 

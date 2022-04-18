@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 DB = process.env.DB;
-mongoose
+const conn=mongoose
   .connect(DB, {
   })
 

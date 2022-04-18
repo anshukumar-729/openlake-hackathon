@@ -6,8 +6,8 @@ const courseSchema = new mongoose.Schema({
   courseCode: { type: String, required: true, unique: true },
   instructorName: { type: String },
   photo: { type: String },
-  credits:{type:Number},
-  topicsIncluded: { type: Array },
+  credits:{type:String},
+  about: { type: String },
 });
 const blogsSchema = new mongoose.Schema({
   courseCode: { type: String, required: true },
@@ -15,7 +15,7 @@ const blogsSchema = new mongoose.Schema({
   credits: { type: String },
   photo: { type: String },
   instructorName: { type: String },
-  about: { type: Number },
+  about: { type: String },
   review: [
     {
       bloggerName: { type: String },
