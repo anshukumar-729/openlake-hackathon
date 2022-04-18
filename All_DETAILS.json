@@ -5,7 +5,8 @@
     "course id": "AA101",
     "course name": "Essential Physical Activity",
     "credits":,
-    "courseDetail":
+    "courseDetail":,
+    "img":"img_purnendu"
 
     },
 
@@ -14,7 +15,8 @@
     "course id": "AA103",
     "course name": "National Service Scheme",
     "credits":,
-    "courseDetail":
+    "courseDetail":,
+    "img":"img_pawan"
     },
     {
         "name":"Dr. Nagesh D. Patil",
@@ -30,7 +32,8 @@
         7. Relation between professional and general ethics.
         8. The nature of engineering ethics, the value of ethnical practices in engineering.
         9. Certain specific issues pertaining to medical ethics, legal ethics, environmental ethics, 
-        computer ethics and business ethics."
+        computer ethics and business ethics.",
+        "img":"img_nageshpatil"
     },
 
     {
@@ -39,7 +42,8 @@
         "course name": "Software Tools & Technologies I ",
         "credits": "4",
         "courseDetail": "Scripting Languages (shell programming, python, Java Script), Web programming, GUI 
-        programming tools, Document Processing tools."
+        programming tools, Document Processing tools.",
+        "img":"img_saha"
     },    
     {
         "name":"Dr. Amit Kumar Dhar",
@@ -50,7 +54,8 @@
         by contradiction, inductive proofs. Combinatorics: Basic counting techniques, pigeon-hole 
         principle, recurrence relations, generating functions, Polya’s counting theorem. Introduction to 
         probabilistic method in combinatorics, Inclusion-exclusion principle, Introduction to number 
-        theory and group theory."
+        theory and group theory.",
+        "img":"img_amitkdhar"
     },
     {
         "name":"Dr. Amit Kumar Dhar",
@@ -59,7 +64,8 @@
         "credits":"4",
         "courseDetail": "Stacks, Queues, Lists; Sorting and Searching; Trees, Tree Traversals, Heaps; Binary Search, 
         Binary Search Trees; Graphs: Representations, Depth First Search, Breadth First Search.
-        "
+        ",
+        "img":"img_amitkdhar"
     },  
     {
         "name":"Dr. Amit Kumar Dhar",
@@ -67,7 +73,8 @@
         "course name": "Software Tool and Technologies Lab-II",
         "credits":"4",
         "courseDetail": "Software Management tools, CVS, lab exercise for developing large system and application 
-        programs."
+        programs.",
+        "img":"img_amitkdhar"
     },
     {
         "name":"Dr. Rishi Ranjan Singh",
@@ -76,7 +83,8 @@
         "credits":"2",
         "courseDetail": "Basics of graph theory, Formal logic: Propositional logic: proof system, semantics, 
         completeness, compactness.
-        "
+        ",
+        "img":"img_rishi"
     },
     {
         "name":"Dr. Barun Gorain",
@@ -86,7 +94,8 @@
         "courseDetail": "Alphabets, languages, finite state machines - deterministic and non-deterministic finite 
         automata. Context Free Grammars, Context Free Languages, Parse trees, Push DownAutomata, Pumping lemma for CFLs and applications, CYK algorithm Turing machines, 
         Variants, Undecidability theory.
-        "
+        ",
+        "img":"img_barun"
     },
     {
         "name":"Prof. Santosh Biswas",
@@ -98,7 +107,8 @@
         Basic building blocks for the ALU, Adder, Subtractor, Shifter, Multiplication and division circuits, 
         Control path microprogramming (only the idea), hardwired, logic; External interface, Memory 
         organization; Technology-ROM, RAM, EPROM, Flash etc. Cache; Cache coherence protocol 
-        for uniprocessor (simple), I/O Subblock, I/O techniques -interrupts, polling, DMA."
+        for uniprocessor (simple), I/O Subblock, I/O techniques -interrupts, polling, DMA.",
+        "img":"img_santosh"
     }    
     {
         "name":"Dr. Anand M. Baswade",
@@ -109,7 +119,8 @@
         Synchronization; Classical Problems (Producer Consumer, dining philosophers etc.); 
         Deadlocks: Detection, Prevention and avoidance mechanisms. Memory Management, 
         Segmentation& Paging Demand Paging; Files and Directories organization, Security and 
-        Protection Mechanisms; System Threats, Case studies: UNIX and NT."
+        Protection Mechanisms; System Threats, Case studies: UNIX and NT.",
+        "img":"img_anand"
     },
     {
         "name":"Dr. Vishwesh Jatala",
@@ -118,14 +129,16 @@
         "credits":"4",
         "courseDetail":"Compiler structure: analysis-synthesis model of compilation, various phases of a compiler, tool 
         based approach to compiler construction. Lexical analysis,Syntax analysis, Syntax directed 
-        translation, Type checking, Run time system, Intermediate code generation,Code generation."
+        translation, Type checking, Run time system, Intermediate code generation,Code generation.",
+        "img":"img_vishwesh"
     },
     {
         "name":"Dr. I. Vinod Kumar Reddy",
         "course id": "CS252",
         "course name": "Algorithms-II",
         "credits":"4",
-        "courseDetail":"Reviewing sorting and graph algorithms, Linear programming; Network flow algorithms; NPcompleteness; Approximation algorithms; Randomized algorithms; Geometric Algorithms."
+        "courseDetail":"Reviewing sorting and graph algorithms, Linear programming; Network flow algorithms; NPcompleteness; Approximation algorithms; Randomized algorithms; Geometric Algorithms.",
+        "img":"img_vinodr"
     },
     {
         "name":"Dr. Rishi Ranjan Singh",
@@ -134,7 +147,8 @@
         "credits":"2",
         "courseDetail":"Reviewing concepts of Turing Machines. Time and Space bounded computation. Reductions, 
         theory of NP completeness, Introduction to time and space complexity.
-        "
+        ",
+        "img":"img_rishi"
     },    
     {
         "name":"Dr. Subhajit Sidhanta",
@@ -143,7 +157,8 @@
         "credits":"4",
         "courseDetail":"Overview of file organisation techniques: sequential, direct, indexed, hashed, inverted, Btrees, Data models: relational, network, hierarchical, NoSql, Relational model: algebra, 
         calculus, normal forms. Implementation of query languages, security and protection of datarecovery methods, Concurrent operations on data bases, introduction to distributed data base 
-        systems."
+        systems.",
+        "img":"img_subhajit"
     },
     {
         "name":"Dr. Arzad Alam Kherani",
@@ -157,7 +172,8 @@
         "course id": "CS519",
         "course name": "High Performance Computer Architecture",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_vishwesh"
     },
     {
         "name":"Dr. Rishi Ranjan Singh",
@@ -166,7 +182,8 @@
         "credits":"6",
         "courseDetail":"Background, Graph theory related concepts, Network analysis metrics, Properties of many 
         real networks, Network models and characteristics: Random Networks, Scale-free Networks, 
-        Small-world Networks, Community detection, Speeding Phenomena"
+        Small-world Networks, Community detection, Speeding Phenomena",
+        "img":"img_rishi"
     },
     {
         "name":"Dr. Gagan Raj Gupta",
@@ -174,7 +191,8 @@
         "course name": "Computer System ",
         "credits":"3",
         "courseDetail":"Basic concepts of operating systems, architecture, compilers, and data base management 
-        systems."
+        systems.",
+        "img":"img_gagan"
     },
     {
         "name":"Dr. SK Subidh Ali",
@@ -186,7 +204,8 @@
         Adversarial Attack and Defense: Decision Time Attack and Defense, Data Poinsoning Attack 
         and Defense.
         Attack and Defense of Deep Learning: 12, I., 111 norm attacks, Robust optimization, 
-        Retraining, Distillation,"
+        Retraining, Distillation,",
+        "img":"img_ali"
     }, 
     {
         "name":"Dr. Vinod I Reddy",
@@ -196,7 +215,8 @@
         "courseDetail":"Algorithm analysis; worst and average case; Recurrences and asymptotes; Algorithms for 
         sorting and selection; Randomized techniques; Search structures: heaps, balanced trees, skip 
         lists, hash tables; Dynamic programming and greedy algorithms; Graph algorithms: breadthand depth-first search, MSTs, shortest paths; NP-Complete problems.
-        "
+        ",
+        "img":"img_vinodr"
     },   
     {
         "name":"Dr. Vinod I Reddy",
@@ -208,14 +228,16 @@
         and random walks: graph connectivity, cover times; perfect matchings, all-pairs shortest paths, 
         minimum spanning trees, DNF counting.
         Parameterized algorithms; fixed-parameter tractability; kernelization; Intractability; 
-        randomized methods, tree-width."
+        randomized methods, tree-width.",
+        "img":"img_vinodr"
     },
     {
         "name":"Dr. Dhiman Saha",
         "course id": "CS614",
         "course name": "Quantum Symmetric-key cryptoanalysis",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_saha"
     },
     {
         "name":"DPGC-EECS",
@@ -234,7 +256,9 @@
         "credits":"NA",
         "courseDetail":"Students registering for this course are expected to get versed in a particular topic allotted by 
         the course instructor. The topic and the credits are assigned by the course instructor. There 
-        will not be any regular lecture delivered for this course type. "
+        will not be any regular lecture delivered for this course type. ",
+        "img":"img_anand"
+
     },
     {
         "name":"DPGC-EECS",
@@ -252,7 +276,8 @@
         "courseDetail": "Introduction to Chemical kinetics, Basics in Electrochemistry: Electrochemical Principles and 
         Reactions, Basic concepts of electrochemical cells and batteries, Basic concept of Industrial 
         Chemistry, Laboratory vs Industrial synthesis, Homogeneous and Heterogeneous catalysis.
-        "
+        ",
+        "img":"img_arup"
     },
     {
         "name":"Dr. Arup Mukherjee",
@@ -262,7 +287,8 @@
         "courseDetail":"Introduction to Chemical kinetics, Basics in Electrochemistry: Electrochemical Principles and 
         Reactions, Basic concepts of electrochemical cells and batteries, Basic concept of Industrial 
         Chemistry, Laboratory vs Industrial synthesis, Homogeneous and Heterogeneous catalysis.
-        "
+        ",
+        "img":"img_arup"
     }, 
     {
         "name":"Dr Arup Mukherjee",
@@ -272,21 +298,24 @@
         "courseDetail":"Introduction to Chemical kinetics, Basics in Electrochemistry: Electrochemical Principles and 
         Reactions, Basic concepts of electrochemical cells and batteries, Basic concept of Industrial 
         Chemistry, Laboratory vs Industrial synthesis, Homogeneous and Heterogeneous catalysis.
-        "
+        ",
+        "img":"img_arup"
     },
     {
         "name":"Dr. MD. Mehboob Alam",
         "course id": "CY203",
         "course name": "Statistical Mechanics and Thermodynamics",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_drmehboob"
     },  
     {
         "name":"Dr. Satyajit Gupta",
         "course id": "CY507",
         "course name": "Molecular Spectroscopy",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_satyajit"
     },  
     {
         "name":"Dr. Suchetan Pal",
@@ -302,7 +331,8 @@
         and Debye models. T3 dependence of heat capacity of solids at low temperatures.
         Fermi function, Fermi energy, free electron model and density of states, chemical potential of 
         conduction electrons.
-        "
+        ",
+        "img":"img_suchetanp"
     },  
     {
         "name":"Dr. Ganapathy D",
@@ -343,7 +373,8 @@
         Curtin-Hammett principle, Hammond Postulate Reactive intermediates: Carbocations, 
         carbanions, carbenes, benzyne. Empirical scales for electronic, steric, and solvent effects. 
         Mechanism according to free-energy correlation and correspondence with theory of orbital 
-        interaction. Illustrative examples. Linear free energy relationship, Hammett and Taft equations."
+        interaction. Illustrative examples. Linear free energy relationship, Hammett and Taft equations.", 
+        "img":"img_sanjib"
     },  
     {
         "name":"Dr. Raghavender Medishetty",
@@ -357,7 +388,8 @@
         approaches. Various [2+2] and [4+2] cycloaddition reactions. Alder ‘Ene Reaction’. 
         Sigmatropic reactions. Photochemical cycloadditions. Cheletropic reactions. Photochemistry: 
         basics and mechanistic principles, Photochemical rearrangements, Reactivity of simple 
-        chromophores."
+        chromophores.",
+        "img":"img_raghavender"
     },  
     {
         "name":"Dr. Md Mehboob Alam",
@@ -368,7 +400,8 @@
         quenching, Phase behaviour studies, reaction kinetics study (spectroscopic and polarometric), 
         Study of intermolecular hydrogen bonding, Denaturation Studies of biomolecules, 
         Programming and electronic structure calculations.
-        "
+        ", 
+        "img":"img_drmehboob"
     },  
     {
         "name":"Dr. Ganapathy D",
@@ -391,7 +424,8 @@
         nanomaterials, DLVO theory, Schultz-Hurdy Rule. Adsorption on nanoparticle surface, BET
         adsorption isotherm (Principle). Surface functionalization of nanoparticles (Overview), grafting 
         to and grafting from concept, Application in subsurface engineering, drug delivery systems, 
-        semiconductor work function modulation through controlled surface functionalization"
+        semiconductor work function modulation through controlled surface functionalization",
+        "img":"img_satyajit"
     },                                                                                                                 
     {
         "name":"Dr. MD. Mehboob Alam",
@@ -406,7 +440,8 @@
         The kinetics of gases, Chemical kinetics, rates of chemical reactions in gases and surfaces.
         Light-matter interactions and molecular spectroscopy, UV-Vis, IR, fluorescence and
         Raman spectroscopy.
-        "
+        ", 
+        "img":"img_drmehboob"
     },  
     {
         "name":"Dr. Sanjib Banerjee",
@@ -418,7 +453,8 @@
         technologies as well as emerging and potential engineering applications. Applications of 
         these functional stimuli-responsive materials in 3D printing, actuation, self-cleaning glass, 
         smart building and energy storage technology.
-        "
+        ",
+        "img":"img_sanjib"
     },  
     {
         "name":"Dr. Md Mehboob Alam",
@@ -428,7 +464,8 @@
         "courseDetail":"The meaning of geometry optimization, basis set, introduction to some useful QM methods 
         (mainly HF and OFT) used for geometry optimization and implementation of geometry 
         optimization techniques (GDIIS, Conjugate, Gradient, Quasi-Newton-Raphson) with those QM 
-        methods. Introduction to Gaussian and GaussView software."
+        methods. Introduction to Gaussian and GaussView software.",
+        "img":"img_drmehboob"
     },  
     {
         "name":"Dr. Satyajit Gupta",
@@ -438,7 +475,8 @@
         "courseDetail": "Light harvesting materials, band-gap engineering in oxide/halide based semiconductors, 
         metal-semiconductor junction. Conjugated polymer based systems and their synthesis and 
         properties. DSSC and perovskite based systems and their light driven multifunctional 
-        application. Introduction to energy storage systems."
+        application. Introduction to energy storage systems.",
+        "img":"img_satyajit"
     },  
     {
         "name":"Dr. Suchetan Pal",
@@ -449,7 +487,8 @@
         applications; synthesis and biofunctionalization of nanoparticles; RNA interference for gene 
         knockdown; CRISPR-Cas9 for genomic engineering; protein nanotechnology, and design 
         methods; amyloids, antibodies and their applications; biosensors; electrochemical biosensors; 
-        nanopore technology, artificial organelles, and cells"
+        nanopore technology, artificial organelles, and cells",
+        "img":"img_suchetanp"
     },  
     {
         "name":"Dr. Raghavender Medishetty",
@@ -464,14 +503,17 @@
         5. Conversion methodologies of raw materials into industrial products.
         6. Metallic-lithium, sodium and its compounds.
         7. Inorganic pigments, Ti02, lithopone, ZnS, ZnO and Fe203, luminescent pigments.
-        "
+        ",     
+        "img":"img_raghavender"
+
     },  
     {
         "name":"Dr. Rukmankesh",
         "course id": "CY622",
         "course name": "Introduction to Molecular Modeling",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_rukmankesh"
     },  
     {
         "name":"Dr. Ganapathy D",
@@ -485,14 +527,16 @@
         "course id": "CY626",
         "course name": "Advanced Molecular Simulation – Underneath Theory and Practice",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_drmehboob"
     },  
     {
         "name":"Dr. Arup Mukherjee",
         "course id": "CY627",
         "course name": "An Introduction to Catalyst Design: Function and Application",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_arup"
     },  
     {
         "name":"Dr. Ganapathy D",
@@ -530,58 +574,26 @@
         "course id": "DS201",
         "course name": "Statistical Programming",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_nitin"
     },  
     {
         "name":"Dr. Souradyuti Paul",
         "course id": "DS209",
         "course name": "Information Security",
         "credits":,
-        "courseDetail":
+        "courseDetail": ,
+        "img":"img_soura"
     },  
     {
         "name":"Dr. Gagan Raj Gupta",
         "course id": "DS250",
         "course name": "Data Analytics and Visualization",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_gagan"
     },  
-    {
-        "name":"Dr. Soumajit Pramanik",
-        "course id": "DS251",
-        "course name": "Artificial Intelligence",
-        "credits":,
-        "courseDetail":
-    },  
-    {
-        "name":"Dr. SK Subidh Ali",
-        "course id": "DS252",
-        "course name": "DSAI - Lab",
-        "credits":,
-        "courseDetail":
-    },  
-    {
-        "name":"Dr. Soumyajit Pramanik",
-        "course id": "DS501",
-        "course name": "Information Retrieval",
-        "credits":,
-        "courseDetail":
-    },  
-    {
-        "name":"DPGC EECS",
-        "course id": "DS599",
-        "course name": "Thesis",
-        "credits":,
-        "courseDetail":
-    },  
-    {
-        "name":"Dr. Anil Kumar Sao",
-        "course id": "DS602",
-        "course name": "Digital Speech Processing",
-        "credits":,
-        "courseDetail":
-    },  
-    {
+{
         "name":"DPGC EECS",
         "course id": "DS795",
         "course name": "Phd Candidacy",
@@ -600,7 +612,8 @@
         "course id": "EE171",
         "course name": "EE Independent Project",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_nitin"
     },
     {
         "name":"Prof. Santosh Biswas",
@@ -608,7 +621,8 @@
         "course name": "Embedded Systems",
         "credits":"6",
         "courseDetail":"Concepts of embedded programming., Concepts of assembly language, Hardwaredescription language (VHDL/Verilog), High-level synthesis (using Synopsys Symphony C 
-        Compiler), Micro-controller programming."
+        Compiler), Micro-controller programming.",
+        "img":"img_santosh"
     },
     {
         "name":"Dr. Nikhil Chander",
@@ -618,7 +632,8 @@
         "courseDetail":"Semiconductor Materials, concept of doping, majority and minority carriers, recombination
         and generation, temperature dependence of conductivity, Zener and avalanche breakdown,
         BJT, FET, JFET, MOSFET, Switching characteristics of devices: switching phenomenon in 
-        diodes, BJT, MOS & CMOS, switching times, switching speeds."
+        diodes, BJT, MOS & CMOS, switching times, switching speeds.",
+        "img":"img_nikhil"
     },
     {
         "name":"Dr. Prashant Agnihotri",
@@ -631,28 +646,32 @@
         special machines and energy efficient motors.
         Overview of the structure and components of power systems, major issues related to power 
         systems.
-        Overview of power electronics devices and generic power electronic circuits."
+        Overview of power electronics devices and generic power electronic circuits.",
+        "img":"img_pagnihotri"
     },
     {
         "name":"Dr. Sreejith T. V",
         "course id": "EE352",
         "course name": "EE Lab-III",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_sreejith"
     },
     {
         "name":"Dr. Nitin Khanna",
         "course id": "CY203",
         "course name": "EE Lab-IV",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_nitin"
     },
     {
         "name":"Dr. Anil Kumar Sao",
         "course id": "EE371",
         "course name": "Independent Project",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_anil"
     },
     {
         "name":"Dr. Avishek Adhikari",
@@ -666,7 +685,8 @@
         Fundamental of non-linear control, linearization, describing function, phase plane analysis, 
         limit cycles, Lyapunov and BIBO stability, Aizermans and Kalmans conjecture.
         Discretization of continuous system, Z-transform, basics of digital control, optimization 
-        problem, Kalman filter design, artificial neural network and fuzzy control."
+        problem, Kalman filter design, artificial neural network and fuzzy control.",
+        "img":"img_avisheka"
     },
     {
         "name":"Dr. Arzad Alam Kherani",
@@ -676,14 +696,16 @@
         "courseDetail":"Introduction to SDRs; Security analysis of simple systems: Key-Fobs; Bluetooth Security 
         analysis: Protocol Description followed by sniffer analysis; WiFi Security analysis: Protocol 
         Description followed by sniffer analysis; L TE Security analysis: Protocol Description followed 
-        by sniffer analysis; Study of attack models for selective protocols."
+        by sniffer analysis; Study of attack models for selective protocols.",
+        "img":"img_arzad"
     },
     {
         "name":"Dr. Kapil Jainwal",
         "course id": "EE521",
         "course name": "Analog IC Design",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_kapiljainwal"
     },
     {
         "name":"Dr. Sreejith T. V",
@@ -696,7 +718,8 @@
         propagation - Multipath fading, Shadowing, Fading margin, Shadowing margin, Antenna
         Diversity, Wireless Channel Capacity, MIMO, CDMA, OFDM and LTE, Large Scale 
         Propagation effects and Channel Models.
-        "
+        ",
+        "img":"img_sreejith"
     },
     {
         "name":"Dr. Arzad Alam Kherani",
@@ -730,7 +753,8 @@
         "course name": "Advanced Computer Networks",
         "credits":"6",
         "courseDetail":"Basics of Computer Networking, TCP/IP protocol stack, Local Area Networks (Ethernet, WiFi), Network Management, Network Security, Multimedia Transport, Next generation Internet 
-        architectures."
+        architectures.",
+        "img":"img_anand"
     },
     {
         "name":"Dr. Arzad Alam Kherani",
@@ -751,7 +775,8 @@
         "courseDetail": "Basics of programming using an appropriate language; Basic UNIX commands; Arithmetic 
         operations; Data Types; Input and output functions; Conditionals; Loops; Function 
         constructions; Recursion; Arrays; Pointers; Strings; Classes; File handling; Object oriented 
-        programming"
+        programming",
+        "img":"img_barun"
         
         
     },
@@ -769,7 +794,8 @@
         Parallax, Aberration, Precession of Equinoxes, Equatorial Mounting of a Telescope Star 
         Formation and Stellar Evolution - Stellar Nuclear Reactions, White Dwarfs, Neutron Star, Black 
         Holes, Supernova
-        "
+        ",
+        "img":"img_mahavir"
     },
     {
         "name":"Dr. Arup Mukherjee",
@@ -778,7 +804,8 @@
         "credits":"2",
         "courseDetail":"Organic/Inorganic Hybrid Materials: design, synthesis and characterization, properties, 
         applications, Organometallic materials, Materials for energy storage systems and fuel cells, 
-        Materials for redox flow batteries, Cluster compounds"
+        Materials for redox flow batteries, Cluster compounds",
+        "img":"img_arup"
     },
     {
         "name":"Dr. Arup Mukherjee",
@@ -790,7 +817,8 @@
         wave-particle duality, concept of wave function, particle in 1D box). Applications of 
         semiconductor systems and solar-cells, conjugated polymers (coupling reactions), inorganic 
         (quantum dot synthesis and properties) and hybrid semiconductors (advanced synthetic 
-        protocols)."
+        protocols).",
+        "img":"img_arup"
     },
     {
         "name":"Dr. Sanjib Banerjee",
@@ -801,14 +829,16 @@
         questions Quantitative and qualitative methods – strengths and weaknesses Instrumentation 
         and data logging, Data sampling, collection, testing Data analysis, interpretation and 
         limitations, Validity, reliability, sources of error, Data management and presentation.
-        "
+        ",
+        "img":"img_sanjib"
     },
     {
         "name":"Ms. Lu, Hao-Yu",
         "course id": "LA303",
         "course name": "Chinese Language Beginner’s-1",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_fadlou"
     },
     {
         "name":"Dr. Anindita Ghosh",
@@ -825,7 +855,8 @@
        3. The positive side of negative emotions- Resilience and defensive pessimism
        4. Assessment of well-being: Tools, methodological constraints, accepted indicators
        5. Applications of positive psychology techniques- positive psychology interventions 
-       exercises, and practice."
+       exercises, and practice.",
+       "img":"img_anindita"
     },
     {
         "name":"Ms. Lu, Hao-Yu",
@@ -836,7 +867,8 @@
         background. The course will cover (1) more daily topics, (2) more family terms and titles, (3) 
         expressing individual preferences and abilities, (4) basic grammatical structure such as more 
         measure words, “duo” as an indefinite number and so forth, and (5) writing Chinese 
-        characters."
+        characters.",
+        "img":"img_fadlou"
     },
     {
         "name":"Ms. Lu, Hao-Yu",
@@ -846,7 +878,8 @@
         "courseDetail":"This course aims to introduce basic knowledge of Chinese to students with Chinese learning 
         background. The course will cover (1) the relationship between work, rest and time, (2) 
         expressing seasonal and climate situations, (3) basic grammar such as aspect particle and so 
-        forth, and (4) writing Chinese characters."
+        forth, and (4) writing Chinese characters.",
+        "img":"img_fadlou"
     },
     {
         "name":"Ms. Lu, Hao-Yu",
@@ -857,28 +890,32 @@
         background. The course will cover (1) more daily topics, (2) family terms and titles, (3) 
         expressing individual preferences and abilities, (4) basic grammatical structure such as more 
         measure words, "you" sentence and so forth, and (5) writing Chinese characters.
-        "
+        ", 
+        "img":"img_fadlou"
     },
     {
         "name":"Dr. Anindita Ghosh",
         "course id": "LA324",
         "course name": "Leadership: An Organizational Behaviour Perspective",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_anindita"
     },
     {
         "name":"Dr. Sonal Jha",
         "course id": "LA326",
         "course name": "Adaptation: Literature and Beyond",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_sonal"
     },
     {
         "name":"Dr. Sonal Jha",
         "course id": "LA327",
         "course name": "Introduction to Partition Literature",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_sonal"
     },
     {
         "name":"Dr. Sitakanta Panda",
@@ -895,7 +932,8 @@
         "courseDetail": "(1) Philosophy, virtue, and etiquette system.
         (2) Cuisine and tea art.
         (3) Clothing, dance and music.
-        (4) Chinese New Year"
+        (4) Chinese New Year",
+        "img":"img_fadlou"
     },
     {
         "name":"Ms. Lu, Hao-Yu",
@@ -911,7 +949,8 @@
         (2) Tools for Chinese calligraphy
         (3) Strokes in Chinese calligraphy
         (4) Practice Chinese calligraphy with students' Chinese names
-        (5) Practice writing short spring rolls (good phrases used in Chinese New Year)"
+        (5) Practice writing short spring rolls (good phrases used in Chinese New Year)",
+        "img":"img_fadlou"
     },
     {
         "name":"Dr. Sonal Jha",
@@ -925,14 +964,16 @@
         "course id": "LA358",
         "course name": "Game Theory",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_radeef"
     },
     {
         "name":"Dr. Thirthankar Chakraborty",
         "course id": "LA361",
         "course name": "Introduction to Modern American Poetry",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_thirthankarc"
     },
     {
         "name":"Dr. Thirthankar Chakraborty",
@@ -946,14 +987,16 @@
         "course id": "MA505",
         "course name": "Complex Analysis",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_lkpatra"
     },
     {
         "name":"Dr. Anuj Jakhar",
         "course id": "MA506",
         "course name": "Multi-Variable Calculus",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_anujjakhar"
     },
     {
         "name":"Prof. P. D. Srivastava",
@@ -967,14 +1010,16 @@
         "course id": "MA508",
         "course name": "Topology",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_asrifa"
     },
     {
         "name":"Dr. Raj Kumar Mistri",
         "course id": "MA514",
         "course name": "Analytic Number Theory",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_rajkumarmistri"
     },
 
     {
@@ -982,42 +1027,48 @@
         "course id": "MA607",
         "course name": "Fourier Analysis",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_avijit"
     },
     {
         "name":"Dr. Kuldeep Kumar Kataria",
         "course id": "MA611",
         "course name": "Stochastic Processes",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_kuldeepk"
     },
     {
         "name":"Dr. Arnab Patra",
         "course id": "MA618",
         "course name": "Introduction to Spectral Theory",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_arnabp"
     },
     {
         "name":"Dr. Anuj Jhakar",
         "course id": "MA619",
         "course name": "Advanced Algebraic Number Theory",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_anujjakhar"
     },
     {
         "name":"Dr. Kaushik Bandyopadhayay",
         "course id": "ME102",
         "course name": "Engineering and Machine Drawing",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_kaushik"
     },
     {
         "name":"Dr. Rahul Jain",
         "course id": "ME151",
         "course name": "Fundamentals of Metallurgy",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_rahul"
     },
     {
         "name":"Dr. Udayraj",
@@ -1031,7 +1082,8 @@
         external and internal flows; Natural and Mixed convection; Design of heat exchangers: LMTD 
         and NTU methods; Radiation: Processes and properties; Black and real body radiation; view 
         factor and radiation exchanges between surfaces in an enclosure; concept of mass transfer.
-        "
+        ",
+        "img":"img_udayraj"
     },
     {
         "name":"Dr. Anshul Faye",
@@ -1042,7 +1094,8 @@
         of particles; Kinetics of system of particles, Plane kinematics of rigid bodies; Plane kinetics of 
         104
         rigid bodies, energy and momentum methods, Kinetics and Kinematics of rigid bodies in three 
-        dimensions; Introduction to mechanical Vibrations."
+        dimensions; Introduction to mechanical Vibrations.",
+        "img":"img_afaye"
     },
     {
         "name":"Dr. Purnendu Das",
@@ -1053,7 +1106,8 @@
         and stability; Failure theories; Fatigue failure; Probabilistic approach to design; Design of 
         joints; Design of spring; Design of Spur and Helical gear sets; Design of belt and chain drives; 
         Analysis of clutches and brakes; Sliding and rolling contact bearings; Design of shafts; 
-        Analysis and application of coupling"
+        Analysis and application of coupling",
+        "img":"img_purnendu"
     },
     {
         "name":"Dr. Soumya Gangopadhyay",
@@ -1066,7 +1120,8 @@
         cutting; Rake angles in oblique cutting; velocity relationship and Force relationships in oblique 
         cutting; General classification of unconventional machining, chemical machining, electricdischarge machining, Abrasive Jet and Ultrasonic Machining, electron beam machining, laser 
         beam machining, ion beam machining, plasma arc machining; Comparative evaluation of 
-        different processes"
+        different processes",
+        "img":"img_soumya"
     },
     {
         "name":"Dr. Anshul Faye",
@@ -1078,7 +1133,8 @@
         fluid mechanics
         2. experiments related to measurement of stress, strain, deflection, velocity, acceleration, 
         forces, pressure, flow, etc.
-        "
+        ",
+        "img":"img_afaye"
     },
     {
         "name":"Dr. Rahul Jain",
@@ -1089,7 +1145,8 @@
         manufacturing science
         2. experiments to demonstrate several machining process
         3. experiments related to measurement and characterization techniques in 
-        manufacturing science and thermal engineering"
+        manufacturing science and thermal engineering",
+        "img":"img_rahul"
     },
     {
         "name":"Dr. Pravesh C. Shukla",
@@ -1107,14 +1164,16 @@
         calculations. Room air distribution principles. Design of air duct systems. Indoor air quality. 
         Ventilation. Various types of air conditioning systems. Cooling, dehumidification and 
         humidification equipment. Temperature, pressure and humidity controllers. Various types of 
-        controls and control strategies."
+        controls and control strategies.",
+        "img":"img_pravesh_shukla"
     },
     {
         "name":"Dr. Pravesh C. Shukla",
         "course id": "ME416",
         "course name": "Power Plant Engineering",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_pravesh_shukla"
     },
     {
         "name":"Dr. Vijay S. Duryodhan",
@@ -1128,7 +1187,8 @@
         in pipes and channels; Laminar and turbulent natural convection - laminar and turbulent mixed 
         convection; Pool boiling-nucleate boiling-film boiling; flow boiling-condensation; dropwise 
         condensation; film condensation; Convective heat transfer with nanofluids; Combined 
-        convection and radiation; Double diffusive convection"
+        convection and radiation; Double diffusive convection",
+        "img":"img_vijaya"
     },
     {
         "name":"Dr. Kaushik Bandyopadhayay",
@@ -1141,7 +1201,8 @@
         lower bound theorem, slab analysis. Bulk Forming Processes: forging; extrusion, wire and 
         tube drawing, rolling; process description and application of theory. Sheet Forming 
         Processes: blanking, deep drawing, stretch forming, bending. Advanced techniques: 
-        numerical approaches in metal forming"
+        numerical approaches in metal forming",
+        "img":"img_kaushik"
     },
     {
         "name":"Dr. Jose Immanuel R.",
@@ -1151,7 +1212,8 @@
         "courseDetail":"Fundamentals of Fluid Power - Fluid Properties - Pneumatic and Hydraulic components: 
         symbols and their usage - Fluid power systems as a tool for automation - Predicting 
         Performance Through Simulation - Advanced Components and Systems.
-        "
+        ",
+        "img":"img_jose"
     },
     {
         "name":"Dr. Vijay S. Duryodhan",
@@ -1162,7 +1224,8 @@
         momentum and energy and species conservation equations; Boundary conditions; Pressure
         driven flows; Surface tension driven flows and it's modulation; Unsteady flows; Electrokinetic 
         flows; Stokes drag on sphere; Introduction to lubrication theory; Gas flow through micro 
-        conduits; Biomicrofluidics; Microfluidics components; Introduction to microfabrication."
+        conduits; Biomicrofluidics; Microfluidics components; Introduction to microfabrication.",
+        "img":"img_vijaya"
     },
     {
         "name":"Dr. Nagesh Patil",
@@ -1184,7 +1247,8 @@
         Colloidal Deposits and its interfaciat science: Coffee ring effect, blood-stain patterns,
         colloidal particle-sorting, etc.
         Special Topics: Applications in Forensic science, biotechnology, energy and sustainable
-        environment."
+        environment.",
+        "img":"img_nageshpatil"
     },
     {
         "name":"Dr. Anshul Faye",
@@ -1195,7 +1259,8 @@
         and stress fields; Stress intensity factor; Westergaard’s approach; Elasto-plastic fracturemechanics, CTOD; J-Integral; Test methods; Fatigue failure and environment assisted 
         fracture; Numerical analysis of cracks; Mixed mode crack initiation and growth.
         
-        "
+        ",
+        "img":"img_afaye"
     },
     {
         "name":"Dr. Rahul Jain",
@@ -1205,7 +1270,8 @@
         "courseDetail":"Introduction and historical background; Background on variational calculus: Galerkin methods, 
         Collocation methods, Least-squares methods. Variational methods of approximationRayleigh-Ritz method, variational theorems; 1D FEM; Trusses; Beams and frames; 2D 
         problems: Constant strain triangles, Axisymmetric problems; Isoparametric elements; 3D 
-        problems; Shell analysis; Solution of heat conduction, fluid flow, vibration, and stability."
+        problems; Shell analysis; Solution of heat conduction, fluid flow, vibration, and stability.",
+        "img":"img_rahul"
     },
     {
         "name":"Dr. Soumya Gangopadhyay",
@@ -1217,7 +1283,8 @@
         Introduction to CAD/CAM, NC, CNC, DNC, Adaptive control. Manual and computer assisted 
         part programming. Introduction to robots and their application in manufacturing. Process 
         planning and Computer Aided Process planning. Group Technology, Opitz System and GT 
-        benefits."
+        benefits.",
+        "img":"img_soumya"
     },
     {
         "name":"Dr. Balkrishna Mehta",
@@ -1237,21 +1304,24 @@
         (CTA), comparison of CCA and CTA, measurements of fluctuating velocity in turbulent flow, 
         Laser Doppler Velocimetry/Anemometry (LDV/LDA), Particle Image Velocimetry (PIV), microPIV, Flow visualization methods; Temperature Measurements: Details of Thermocouple 
         measurements and its calibration; Liquid crystal thermography (LCT), lnfraRed Thermography (IRT), optical methods for temperature and density measurements: qualitative and quantitative 
-        analysis through Interferometer, Schlieren and Shadowgraph;"
+        analysis through Interferometer, Schlieren and Shadowgraph;",
+        "img":"img_krishnab"
     },
     {
         "name":"Dr. Jose Immanuel R.",
         "course id": "ME654",
         "course name": "Advanced Materials - Development and Characterization",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_jose"
     },
     {
         "name":"Dr. Udayraj",
         "course id": "ME673",
         "course name": "Computational Fluid Dynamics Laboratory",
         "credits":,
-        "courseDetail":
+        "courseDetail":,
+        "img":"img_udayraj"
     }
 
 ]
