@@ -18,34 +18,17 @@ For running Frontend
 
  the app will runs in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-The project has been deployed over heroku [https://iitbhilai-all.herokuapp.com/](https://iitbhilai-all.herokuapp.com/)
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The project has been deployed over heroku [https://iitbhilai-all.herokuapp.com](https://iitbhilai-all.herokuapp.com)
+The page will reload when you make changes. 
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Introduction 
+a) Our app is  will be accessible to only iit bhilai users.  
+b) It contain Four Secction  `Chats` `Courses` `Alumnis` `Lost and Found` which solves the basic problem faced by the students.  
+c) A Common Group chat platform has been created for iitbhilai students where every one can share any kind of information.  
+d) Couses section contain all the courses runnning in iitbhilai with respective credits ,course details and course instructors. Student can ask any doubts regarding      the courses, can share their notes and also can send review the course.   
+Student can search courses using course id.  
+e) Alumni Section shows the list of all the alumnis of iitbhiai. which shows all details(placements,position,company packages placement prepration etc). Students can ask any queries regarding placement prepration.  
+f) Lost And Found Section as the name suggest student student can post what ever he/she founds the respective person can contact him/her using phone number given within details  .
 
 ## Technology Used
 `React.js` for frontend
@@ -53,5 +36,11 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 `Node.js`
 `Atlas`
 `Tailwind CSS`
+ ## Developers Name 
+ ```
+ Anshu Kumar 
+ Sudhir Sharma
+ Indrajit Kuli
+ ```
 
 
