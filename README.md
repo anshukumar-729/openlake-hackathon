@@ -31,11 +31,11 @@ e) Alumni Section shows the list of all the alumnis of iitbhiai. which shows all
 f) Lost And Found Section as the name suggest student student can post what ever he/she founds the respective person can contact him/her using phone number given within details  .
 
 ## Technology Used
-`React.js` for frontend
-`mongodb`  for backend
-`Node.js`
-`Atlas`
-`Tailwind CSS`
+`React.js` for frontend  
+`mongodb`  for backend  
+`Node.js`  
+`Atlas`  
+`Tailwind CSS`  
  ## Developers Name 
  ```
  Anshu Kumar 
