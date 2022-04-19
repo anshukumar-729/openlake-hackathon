@@ -39,7 +39,7 @@ const Home = () => {
                 </button>
               </>
             )}
-            {localStorage.getItem("active") == 0 && (
+            {!localStorage.getItem("active") && (
               <>
                 <Link
                   to="signIn"

@@ -13,6 +13,7 @@ const cors = require("cors");
 const { Blogs } = require("./models/userSchema");
 const { Lost } = require("./models/userSchema");
 const { Courses } = require("./models/userSchema");
+const { Alumni } = require("./models/userSchema");
 const { CommonRoom } = require("./models/userSchema");
 const { AlumniInteraction } = require("./models/userSchema");
 const { response } = require("express");
@@ -123,6 +124,31 @@ app.post("/upload", upload.single("file"), async (req, res) => {
  
   
 });
+app.post("/upload/alumni", upload.single("file"), async (req, res) => {
+  // res.json({ file: req.file });
+  
+    
+  try {
+
+        const alumni = await Alumni.create({
+          email:req.body.email,
+          alumniName: req.body.alumniName,
+          placedAt: req.body.placedAt ,
+          about: req.body.about,
+          photo: filename,
+          linkedInUrl:req.body.linkedInUrl ,
+        });
+
+
+     res.redirect(req.body.url);
+  } catch (err) {
+    console.log(err);
+    res.send(err);
+  }
+
+ 
+  
+});
 app.get("/files", (req, res) => {
   gfs.files.find().toArray((err, files) => {
     // Check if files
@@ -214,6 +240,14 @@ app.post("/api/courses/register", async (req, res) => {
 app.get("/api/courses/read", async (req, res) => {
   try {
     result = await Courses.find({});
+    res.json({ status: "ok", result: result });
+  } catch (err) {
+    res.send(err);
+  }
+});
+app.get("/api/alumni/read", async (req, res) => {
+  try {
+    result = await Alumni.find({});
     res.json({ status: "ok", result: result });
   } catch (err) {
     res.send(err);
@@ -346,14 +380,28 @@ app.get("/api/common/read", async (req, res) => {
 });
 
 /// Alumni interaction  ######################################################################3333
-app.post("/api/alumni/add", async (req, res) => {
+app.post("/api/alumni/blog/add", async (req, res) => {
+   var dt = new Date();
+   var tm = dt.toLocaleTimeString();
   try {
     const alumni = await AlumniInteraction.create({
      alumniName: req.body.alumniName,
-  message: req.body.messege,
-  date:req.body.date
+  message: req.body.message,
+  date:dt,
+  photo:req.body.photo
     });
 
+    result = await AlumniInteraction.find({});
+    res.json({ status: "ok", result: result });
+  } catch (err) {
+    console.log(err);
+    res.send(err);
+  }
+});
+app.get("/api/alumni/blog/read", async (req, res) => {
+   
+  try {
+   
     result = await AlumniInteraction.find({});
     res.json({ status: "ok", result: result });
   } catch (err) {

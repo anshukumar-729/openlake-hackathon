@@ -51,7 +51,7 @@ const NavBar = () => {
             ></img>
           </div>
         )}
-        {localStorage.getItem("active") == 0 && (
+        {!localStorage.getItem("active") && (
           <div className="absolute sm:relative right-0 top-4 sm:top-0 flex">
             <Link
               to="signIn"

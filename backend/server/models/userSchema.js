@@ -56,6 +56,14 @@ const alumniInteractionSchema = new mongoose.Schema({
   message: { type: String },
   photo: { type: String },
 });
+const alumniSchema = new mongoose.Schema({
+  alumniName: { type: String },
+  placedAt: { type: String },
+  about: { type: String },
+  email: { type: String },
+  photo: { type: String },
+  linkedInUrl: { type: String },
+});
 
 // listSchema.pre('save', async function (next){
 
@@ -67,4 +75,5 @@ const Blogs = new mongoose.model("Blogs", blogsSchema);
 const Lost = new mongoose.model("Lost", lostSchema);
 const CommonRoom = new mongoose.model("CommonRoom", commonRoomSchema);
 const AlumniInteraction = new mongoose.model("AlumniInteraction", alumniInteractionSchema);
-module.exports = { Courses: Courses,  Blogs: Blogs ,Lost:Lost, CommonRoom:CommonRoom,AlumniInteraction:AlumniInteraction};
+const Alumni = new mongoose.model("Alumni", alumniSchema);
+module.exports = { Courses: Courses,  Blogs: Blogs ,Lost:Lost, CommonRoom:CommonRoom,AlumniInteraction:AlumniInteraction,Alumni:Alumni};

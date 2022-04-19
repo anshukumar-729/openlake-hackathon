@@ -116,11 +116,11 @@ const Chats = () => {
           Refresh
         </button>
         <h3 className="text-xl mt-7"> Recent Activity</h3>
-        <div className="bg-black p-5 mt-10 rounded-md">
+        <div className="bg-yell p-5 mt-10  rounded-md">
           {result.length != 0 && (
             <>
               {result[0].data.map((value) => (
-                <div className=" sm:flex mb-5 bg-gray-700 p-3 rounded-t-md text-black">
+                <div className=" sm:flex mb-5 bg-gray-700 p-3 rounded-t-md text-white">
                   <img className="w-10 rounded-full h-10" src={value.photo} />
                   <div>
                     <div className="sm:flex justify-between ml-4">
