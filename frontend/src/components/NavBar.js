@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const NavBar = () => {
-
-  const logout = () =>{
-    localStorage.setItem("active",0);
-    console.log("logOut")
-    console.log(localStorage.getItem("active"))
-    window.location.replace("/");   
-  }
+  const logout = () => {
+    localStorage.setItem("active", 0);
+    console.log("logOut");
+    console.log(localStorage.getItem("active"));
+    window.location.replace("/");
+  };
   return (
     <div style={{ backgroundColor: "#0E0F0F" }} className="p-4 sm:flex ">
       <Link to="/">
@@ -51,16 +50,17 @@ const NavBar = () => {
             ></img>
           </div>
         )}
-        {!localStorage.getItem("active") && (
-          <div className="absolute sm:relative right-0 top-4 sm:top-0 flex">
-            <Link
-              to="signIn"
-              className="bg-yell sm:rounded-2xl rounded-md pl-5 pr-5 pt-2 pb-2 font-normal mr-4 sm:mr-10"
-            >
-              Sign In
-            </Link>
-          </div>
-        )}
+        {!localStorage.getItem("active") ||
+          (localStorage.getItem("active") == 0 && (
+            <div className="absolute sm:relative right-0 top-4 sm:top-0 flex">
+              <Link
+                to="signIn"
+                className="bg-yell sm:rounded-2xl rounded-md pl-5 pr-5 pt-2 pb-2 font-normal mr-4 sm:mr-10"
+              >
+                Sign In
+              </Link>
+            </div>
+          ))}
       </div>
     </div>
   );

@@ -2,7 +2,6 @@ import React from "react";
 import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 
-
 const Home = () => {
   // if(localStorage.getItem("active")){
   //   console.log("active");
@@ -11,13 +10,13 @@ const Home = () => {
   //   console.log(localStorage.getItem("photo"));
   // }
   // else{
-  //   window.location.replace("/signIn");   
+  //   window.location.replace("/signIn");
   // }
   const logout = () => {
     localStorage.setItem("active", 0);
     console.log("logOut");
     console.log(localStorage.getItem("active"));
-    window.location.replace("/");   
+    window.location.replace("/");
   };
   return (
     <div className="">
@@ -39,7 +38,8 @@ const Home = () => {
                 </button>
               </>
             )}
-            {!localStorage.getItem("active") && (
+            {(!localStorage.getItem("active") ||
+              localStorage.getItem("active") == 0) && (
               <>
                 <Link
                   to="signIn"

@@ -4,23 +4,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { faArrowsRotate } from "@fortawesome/free-solid-svg-icons";
 
-
 const Chats = () => {
   // var result=[{personName:"aa"}];
-  if(localStorage.getItem("active")==1){
+  if (localStorage.getItem("active") == 1) {
     console.log("active");
     console.log(localStorage.getItem("name"));
     console.log(localStorage.getItem("email"));
     console.log(localStorage.getItem("photo"));
-  }
-  else{
+  } else {
     window.location.replace("/signIn");
   }
   const [personName, setPersonName] = useState("Anshu kumar");
 
   const [message, setMessage] = useState("");
   const [result, setResult] = useState([]);
-   const [time, setTime] = useState(0);
+  const [time, setTime] = useState(0);
   const setitem = (data) => {
     setResult([
       {
@@ -40,9 +38,9 @@ const Chats = () => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            personName:localStorage.getItem("name"),
+            personName: localStorage.getItem("name"),
             message,
-            photo:localStorage.getItem("photo")
+            photo: localStorage.getItem("photo"),
           }),
         }
       );
@@ -73,10 +71,10 @@ const Chats = () => {
       console.log(err);
     }
   }
-   if (time == 0) {
-     getMassage();
-     setTime(1);
-   }
+  if (time == 0) {
+    getMassage();
+    setTime(1);
+  }
 
   // getMassage();
   return (
@@ -129,7 +127,7 @@ const Chats = () => {
                         {value.date}
                       </p>
                     </div>
-                   <h2 className="ml-4 overflow-hidden ">{(value.message)}</h2>
+                    <h2 className="ml-4 overflow-hidden ">{value.message}</h2>
                   </div>
                 </div>
               ))}

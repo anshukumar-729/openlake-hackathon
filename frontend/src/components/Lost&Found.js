@@ -12,14 +12,14 @@ const LostFound = () => {
   } else {
     window.location.replace("/signIn");
   }
-  const [time,setTime] = useState(0);
-  const [lostItem,setLostItem] = useState("");
-  const [contact1,setContact1] = useState("");
-  const [contact2,setContact2] = useState("");
-  const [foundItem,setFoundItem] = useState("");
-  const [result,setResult] = useState([]);
+  const [time, setTime] = useState(0);
+  const [lostItem, setLostItem] = useState("");
+  const [contact1, setContact1] = useState("");
+  const [contact2, setContact2] = useState("");
+  const [foundItem, setFoundItem] = useState("");
+  const [result, setResult] = useState([]);
   const setitem = (data) => {
-    console.log(data)
+    console.log(data);
     setResult([
       {
         data: data,
@@ -44,18 +44,17 @@ const LostFound = () => {
     }
   }
   async function deleteItem(key) {
-    console.log("deleting")
+    console.log("deleting");
     try {
       const response = await fetch(
         // "https://arcane-brushlands-01906.herokuapp.com/api/read",
         `http://localhost:3020/delete/${key}`
       );
       const data = await response.json();
-      
+
       console.log(data);
       getImages();
       //  const re = data.result;
-
     } catch (err) {
       console.log(err);
     }
@@ -64,18 +63,17 @@ const LostFound = () => {
     getImages();
     setTime(1);
   }
-  const itemDone = (key,email) =>{
-    console.log("clicking")
-    console.log(key)
+  const itemDone = (key, email) => {
+    console.log("clicking");
+    console.log(key);
     console.log(email);
 
-      if(email==localStorage.getItem("email")){
-        deleteItem(key);
-      }
-      else{
-        alert("The post must me posted by you!")
-      }
-  }
+    if (email == localStorage.getItem("email")) {
+      deleteItem(key);
+    } else {
+      alert("The post must me posted by you!");
+    }
+  };
   return (
     <div className="">
       <NavBar />
@@ -215,7 +213,7 @@ const LostFound = () => {
           <>
             {result[0].data.map((file) => (
               <>
-                {file.isReceived==false && (
+                {file.isReceived == false && (
                   <>
                     <div className="bg-gray-300 sm:flex p-3 m-2 mt-5 sm:h-40 mb-10 rounded-sm">
                       <button
@@ -226,10 +224,14 @@ const LostFound = () => {
                       </button>
                       <img
                         className="h-35"
-                        src={"http://localhost:3020/image/" + file.itemPhoto}
+                        src={
+                          "http://localhost:3020/image/" +
+                          file.itemPhoto
+                        }
                       ></img>
                       <h2 className="text-white text-xl bg-sky-700 mb-4 p-2 rounded-md  sm:mt-10 ml-6">
-                        Item name & Desc <br></br>{file.itemName}
+                        Item name & Desc <br></br>
+                        {file.itemName}
                       </h2>
                       {file.founderName != "" && (
                         <>
