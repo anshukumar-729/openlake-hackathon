@@ -46,9 +46,9 @@ const Courses = () => {
   return (
     <div className="">
       <NavBar />
-      <div className="p-20 text-white  ">
+      <div className="sm:p-20 p-8 text-white  ">
         <input
-          className="p-2 pl-3  w-1/2 rounded-lg border-2 bg-white text-black border-slate-500"
+          className="p-2 pl-3 w-3/4 sm:w-1/2 rounded-lg border-2 bg-white text-black border-slate-500"
           type="search"
           name="search"
           placeholder="Search your Course"
@@ -57,7 +57,7 @@ const Courses = () => {
         />
         <button
           onClick={getCourses}
-          className="bg-yell ml-4 text-black p-2  pl-3 pr-3  rounded-md "
+          className="bg-yell sm:ml-4 text-black p-2 mt-3 pl-3 pr-3  rounded-md "
         >
           Search
         </button>
@@ -80,7 +80,7 @@ const Courses = () => {
                         <>
                           <div
                             style={{ backgroundColor: "#292D2B" }}
-                            className="p-4 pl-6 pb-10 mt-10 mr-10 w-1/4 rounded-md"
+                            className="p-4 pl-6 pb-10 mt-10 mr-10 sm:w-1/4 rounded-md"
                           >
                             <h4 className="text-3xl  mt-8 mb-3 w-1/2">
                               {value.courseName}
@@ -124,7 +124,7 @@ const Courses = () => {
                         <>
                           <div
                             style={{ backgroundColor: "#292D2B" }}
-                            className="p-4 pl-6 pb-10 mt-10 mr-10 w-1/4 rounded-md"
+                            className="p-4 pl-6 pb-10 mt-10 mr-10 sm:w-1/4 rounded-md"
                           >
                             <h4 className="text-3xl  mt-8 mb-3 w-1/2">
                               {value.courseName}
@@ -170,7 +170,7 @@ const Courses = () => {
                         <>
                           <div
                             style={{ backgroundColor: "#292D2B" }}
-                            className="p-4 pl-6 pb-10 mt-10 mr-10 w-1/4 rounded-md"
+                            className="p-4 pl-6 pb-10 mt-10 mr-10 sm:w-1/4 rounded-md"
                           >
                             <h4 className="text-3xl  mt-8 mb-3 w-1/2">
                               {value.courseName}
@@ -214,7 +214,7 @@ const Courses = () => {
                         <>
                           <div
                             style={{ backgroundColor: "#292D2B" }}
-                            className="p-4 pl-6 pb-10 mt-10 mr-10 w-1/4 rounded-md"
+                            className="p-4 pl-6 pb-10 mt-10 mr-10 sm:w-1/4 rounded-md"
                           >
                             <h4 className="text-3xl  mt-8 mb-3 w-1/2">
                               {value.courseName}
@@ -258,7 +258,7 @@ const Courses = () => {
                         <>
                           <div
                             style={{ backgroundColor: "#292D2B" }}
-                            className="p-4 pl-6 pb-10 mt-10 mr-10 w-1/4 rounded-md"
+                            className="p-4 pl-6 pb-10 mt-10 mr-10 sm:w-1/4 rounded-md"
                           >
                             <h4 className="text-3xl  mt-8 mb-3 w-1/2">
                               {value.courseName}
@@ -302,7 +302,7 @@ const Courses = () => {
                         <>
                           <div
                             style={{ backgroundColor: "#292D2B" }}
-                            className="p-4 pl-6 pb-10 mt-10 mr-10 w-1/4 rounded-md"
+                            className="p-4 pl-6 pb-10 mt-10 mr-10 sm:w-1/4 rounded-md"
                           >
                             <h4 className="text-3xl  mt-8 mb-3 w-1/2">
                               {value.courseName}
@@ -346,7 +346,7 @@ const Courses = () => {
                         <>
                           <div
                             style={{ backgroundColor: "#292D2B" }}
-                            className="p-4 pl-6 pb-10 mt-10 mr-10 w-1/4 rounded-md"
+                            className="p-4 pl-6 pb-10 mt-10 mr-10 sm:w-1/4 rounded-md"
                           >
                             <h4 className="text-3xl  mt-8 mb-3 w-1/2">
                               {value.courseName}

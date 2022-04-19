@@ -58,10 +58,10 @@ const SignIn = () => {
       <Link to="/">
         <h6 className="yell text-3xl ml-6 mt-7 font-bold ">IIT BHILAI</h6>
       </Link>
-      <div className="center text-white bg-black w-1/3 h-1/3 rounded-lg p-3">
+      <div className="center text-white bg-black sm:w-1/3 sm:h-1/3 rounded-lg p-3">
         <div className="flex justify-between">
           <div>
-            <h3 className="text-xl text-white">Welcome Back</h3>
+            <h3>Welcome</h3>
             <h3 className="text-2xl text-white">Sign In</h3>
           </div>
           <Link to="/">
@@ -95,7 +95,7 @@ const SignIn = () => {
           <button
             type="button"
             onClick={loginWithFirebase}
-            className="bg-blue-900 w-full text-white border-2 border-white h-10 rounded-md mt-3"
+            className="bg-blue-900 w-full text-white border-2 border-white sm:h-10 rounded-md mt-3"
           >
             Login with google
           </button>

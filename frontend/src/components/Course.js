@@ -117,7 +117,7 @@ const Course = () => {
   return (
     <div className="">
       <NavBar />
-      <div className="p-10 text-white">
+      <div className="sm:p-10 p-5 text-white">
         <h3 className="text-center yell text-3xl">
           {result.length != 0 && <>{result[0].data[0].courseName} </>}
         </h3>
@@ -152,7 +152,7 @@ const Course = () => {
             <>
               {result[0].data[0].review.map((value) => (
                 <div
-                  className="p-6 w-2/5 mr-10 mt-5"
+                  className="p-6 sm:w-2/5 mr-10 mt-5 overflow-hidden"
                   style={{ backgroundColor: "#292D2B" }}
                 >
                   <p>{value.blog}</p>
@@ -182,7 +182,7 @@ const Course = () => {
             ></input>
             <button
               type="submit"
-              className="bg-yell p-3 pl-4 pr-4 text-black ml-10 rounded-full "
+              className="bg-yell mt-6 p-3 pl-4 pr-4 text-black sm:ml-10 rounded-full "
             >
               POST
             </button>

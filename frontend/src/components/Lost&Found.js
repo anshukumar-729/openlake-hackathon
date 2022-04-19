@@ -72,19 +72,22 @@ const LostFound = () => {
       if(email==localStorage.getItem("email")){
         deleteItem(key);
       }
+      else{
+        alert("The post must me posted by you!")
+      }
   }
   return (
     <div className="">
       <NavBar />
 
-      <div className="p-10">
+      <div className="sm:p-10 p-3">
         <h1 class="text-white text-2xl ml-15">LOST ITEM</h1>
         <form
           action="http://localhost:3020/upload"
           method="POST"
           enctype="multipart/form-data"
         >
-          <div class=" flex">
+          <div class=" sm:flex">
             <input name="url" value={window.location.href} hidden></input>
 
             <input
@@ -104,7 +107,7 @@ const LostFound = () => {
               hidden
             ></input>
             <input
-              className="p-3 bg-black text-white rounded-md border-2 border-gray-600 h-12 mt-10 w-1/3"
+              className="p-3 bg-black text-white rounded-md border-2 border-gray-600 h-12 mt-3 sm:mt-10 w-3/4 sm:w-1/3"
               name="item"
               value={lostItem}
               onChange={(e) => setLostItem(e.target.value)}
@@ -113,7 +116,7 @@ const LostFound = () => {
               required
             ></input>
             <input
-              className="p-3 bg-black text-white rounded-md border-2 border-gray-600 h-12 mt-10 w-1/5 ml-4"
+              className="p-3 bg-black text-white rounded-md border-2 border-gray-600 h-12 sm:mt-10 mt-3 w-3/4 sm:w-1/5 sm:ml-4"
               name="phone"
               value={contact2}
               onChange={(e) => setContact2(e.target.value)}
@@ -122,13 +125,13 @@ const LostFound = () => {
               required
             ></input>
 
-            <div className=" mt-7 ml-5 ">
+            <div className=" mt-7 sm:ml-5 ">
               <label for="file" className="text-white text-xl  ml-3">
                 Upload an Image
               </label>
               <br></br>
               <input
-                className="text-white ml-3 mt-2"
+                className="text-white sm:ml-3 mt-2"
                 type="file"
                 name="file"
                 id="file"
@@ -143,13 +146,13 @@ const LostFound = () => {
             POST
           </button>
         </form>
-        <h1 class="text-white text-2xl ml-15 mt-20">FOUND ITEM</h1>
+        <h1 class="text-white text-2xl ml-15 mt-9 sm:mt-20">FOUND ITEM</h1>
         <form
           action="http://localhost:3020/upload"
           method="POST"
           enctype="multipart/form-data"
         >
-          <div class=" flex">
+          <div class=" sm:flex">
             <input name="url" value={window.location.href} hidden></input>
             <input
               name="email"
@@ -169,7 +172,7 @@ const LostFound = () => {
             ></input>
             <input name="receiverName" value={""} hidden></input>
             <input
-              className="p-3 bg-black text-white rounded-md border-2 border-gray-600 h-12 mt-10 w-1/3"
+              className="p-3 bg-black text-white rounded-md border-2 border-gray-600 h-12 mt-5  sm:mt-10 w-3/4 sm:w-1/3"
               name="item"
               value={foundItem}
               onChange={(e) => setFoundItem(e.target.value)}
@@ -178,7 +181,7 @@ const LostFound = () => {
               required
             ></input>
             <input
-              className="p-3 bg-black text-white rounded-md border-2 border-gray-600 h-12 mt-10 w-1/5 ml-4"
+              className="p-3 bg-black text-white rounded-md border-2 border-gray-600 h-12 sm:mt-10 sm:w-1/5 sm:ml-4 w-3/4 mt-3"
               name="phone"
               value={contact1}
               onChange={(e) => setContact1(e.target.value)}
@@ -187,13 +190,13 @@ const LostFound = () => {
               required
             ></input>
 
-            <div className=" mt-7 ml-5 ">
+            <div className=" mt-7 sm:ml-5 ">
               <label for="file" className="text-white text-xl  ml-3">
                 Upload an Image
               </label>
               <br></br>
               <input
-                className="text-white ml-3 mt-2"
+                className="text-white sm:ml-3 mt-2"
                 type="file"
                 name="file"
                 id="file"
@@ -214,7 +217,7 @@ const LostFound = () => {
               <>
                 {file.isReceived==false && (
                   <>
-                    <div className="bg-gray-300 flex p-3 m-2 mt-5 h-40 mb-10 rounded-sm">
+                    <div className="bg-gray-300 sm:flex p-3 m-2 mt-5 sm:h-40 mb-10 rounded-sm">
                       <button
                         onClick={() => itemDone(file.itemPhoto, file.email)}
                         className="bg-green-500 p-3 rounded-md text-white h-10 "
@@ -225,12 +228,12 @@ const LostFound = () => {
                         className="h-35"
                         src={"http://localhost:3020/image/" + file.itemPhoto}
                       ></img>
-                      <h2 className="text-black text-xl mt-10 ml-6">
-                        {file.itemName}
+                      <h2 className="text-white text-xl bg-sky-700 mb-4 p-2 rounded-md  sm:mt-10 ml-6">
+                        Item name & Desc <br></br>{file.itemName}
                       </h2>
                       {file.founderName != "" && (
                         <>
-                          <div className="bg-yellow-500 p-2 text-sm h-14 rounded-full absolute right-16 text-white">
+                          <div className="bg-yellow-500 p-2 text-sm h-14 rounded-full sm:absolute sm:right-16 text-white">
                             <p className="ml-3"> Found on</p>
                             <p className="text-white  ml-3 ">{file.date}</p>
                           </div>
@@ -238,14 +241,14 @@ const LostFound = () => {
                       )}
                       {file.receiverName != "" && (
                         <>
-                          <div className="bg-red-500 p-2 text-sm h-14 rounded-full absolute right-16 text-white">
+                          <div className="bg-red-500 p-2 text-sm h-14 rounded-full sm:absolute sm:right-16 text-white">
                             <p className="ml-3"> Lost on</p>
                             <p className="text-white  ml-3 ">{file.date}</p>
                           </div>
                         </>
                       )}
 
-                      <div className="flex absolute right-16 mt-20 ml-10 bg-gray-700 p-3 h-16  rounded-md text-black">
+                      <div className="flex sm:absolute sm:right-16 mt-5 sm:mt-20 ml-10 bg-gray-700 p-3 h-16  rounded-md text-black">
                         <img
                           className="w-10 rounded-full h-10"
                           src={file.photo}

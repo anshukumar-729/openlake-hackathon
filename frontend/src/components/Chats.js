@@ -20,6 +20,7 @@ const Chats = () => {
 
   const [message, setMessage] = useState("");
   const [result, setResult] = useState([]);
+   const [time, setTime] = useState(0);
   const setitem = (data) => {
     setResult([
       {
@@ -72,13 +73,18 @@ const Chats = () => {
       console.log(err);
     }
   }
+   if (time == 0) {
+     getMassage();
+     setTime(1);
+   }
+
   // getMassage();
   return (
     <div className="">
       <NavBar />
       {/* <button onClick={() => setitem({name:"pp"})}>set</button> */}
 
-      <div className="p-16 text-white  ">
+      <div className="sm:p-16 pl-6 pt-0 text-white  ">
         <h2 className="text-3xl">Chat with your Freinds</h2>
         <div className="flex mt-10 ">
           <form onSubmit={SendMassage}>
@@ -92,7 +98,7 @@ const Chats = () => {
             ></input>
             <button
               type="submit"
-              className="bg-yell p-3 pl-4 pr-4 text-black ml-10 rounded-full "
+              className="bg-yell pl-4 pr-4 pt-2 pb-2 mt-2 text-black sm:ml-10 rounded-full "
             >
               <FontAwesomeIcon
                 icon={faCircleArrowUp}
@@ -114,19 +120,16 @@ const Chats = () => {
           {result.length != 0 && (
             <>
               {result[0].data.map((value) => (
-                <div className="flex  mb-5 bg-gray-700 p-3 rounded-t-xl text-black">
-                  <img
-                    className="w-10 rounded-full h-10"
-                    src={value.photo}
-                  />
+                <div className=" sm:flex mb-5 bg-gray-700 p-3 rounded-t-md text-black">
+                  <img className="w-10 rounded-full h-10" src={value.photo} />
                   <div>
-                    <div className="flex justify-between ml-4">
+                    <div className="sm:flex justify-between ml-4">
                       <p>{value.personName}</p>
-                      <p className="ml-10 text-sm absolute right-32">
+                      <p className="sm:ml-10 text-sm sm:absolute sm:right-32">
                         {value.date}
                       </p>
                     </div>
-                    <h2 className="ml-4">{value.message}</h2>
+                   <h2 className="ml-4 overflow-hidden ">{(value.message)}</h2>
                   </div>
                 </div>
               ))}
